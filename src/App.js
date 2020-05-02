@@ -19,9 +19,7 @@ class App extends Component {
   }
 
   state = {
-    points: 0,
     section: 'english',
-    question: 1,
     test: tests.a11,
     answers: {
       english: Array(75).fill('a'),
@@ -92,7 +90,7 @@ class App extends Component {
     return (
       <div>
         <MainHeader clicked={this.testSelectionHandler} test={this.state.test.id} />
-        <div className={classes.flexContainer}>
+        <div className={[classes.flexContainer, classes.short].join(' ')}>
           <div className={classes.sections}>
             <button 
               className={[classes.sectionButton, this.state.section === 'english' ? classes.selected : null].join(' ')}
@@ -115,34 +113,22 @@ class App extends Component {
               Science
             </button>
           </div>
-          <div className={classes.questionNumber}>
-            {`Question #${this.state.question}`}
-          </div>
-          <div className={classes.questionNumber}>
-            {this.state.score}
-          </div>
         </div>
-        <div className={classes.flexContainer}>
+        <div className={[classes.flexContainer, classes.tall].join(' ')}>
           {this.state.test[this.state.section].questions.map((el,i) => {
             return (
-              <span>{i+1}) <AnswerRow 
-                              clicked = {this.answerChoiceHandler} 
-                              selectedAnswer={this.state.answers[this.state.section][i] /* Determines which answer is highlighted */}
-                              questionNum={i}
-                              section = {this.state.section}
-                              key = {uniqid()}
-                            /> 
-              </span>
+                <span>
+                  <span class={classes.questionNum}>{i+1}) </span>
+                  <AnswerRow 
+                    clicked = {this.answerChoiceHandler} 
+                    selectedAnswer={this.state.answers[this.state.section][i] /* Determines which answer is highlighted */}
+                    questionNum={i}
+                    section = {this.state.section}
+                    key = {uniqid()}
+                  />
+                </span> 
             )
           })}
-        </div>
-        <div>
-          <button onClick={() => this.testSelectionHandler('e73')}>
-            e73
-          </button>
-          <button onClick={() => this.testSelectionHandler('a11')}>
-            a11
-          </button>
         </div>
       </div>
     );
