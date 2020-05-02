@@ -1,0 +1,29 @@
+.headContainer {
+    display: flex;
+    width: 100%;
+    height: 7rem;
+    background-color: #0c2461;
+    top: 0;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.flexContainer {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    min-width: 44vw;
+}
+
+.flexContainer__flexEnd{
+    justify-content: flex-end;
+}
+
+.questionNumber{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #FDFDFD
+}
+
