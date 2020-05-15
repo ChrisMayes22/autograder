@@ -8,7 +8,7 @@ function getTimingFeedback(section, timing, guesses){
 
                 return(
                     <div>
-                        You finished today's test significantly early! Consider the points below when you next meet with your coach.
+                        You finished today's test More than 3 minutes early. Consider the points below when you next meet with your coach.
                         <ul>
                             <li>Remember the S in <strong>STOP</strong>: 
                                 Slow down. The English is a section where you can afford to stop and think.</li>
@@ -37,15 +37,21 @@ function getTimingFeedback(section, timing, guesses){
             } else if(timing === 'slow'){
                 return(
                     <div>
-                        {`You marked your test as having no guesses, but you felt rushed and may
-                        have made some errors as a result. During your next session, your coach will review the following:`}
+                        {`You did not have to guess on any questions, but you did feel rushed. 
+                            During your next session, your coach will review the following:`}
                         <ul>
-                            <li> Remember to use your ACT stopwatch to keep track of time and not
-                                to spend too long on any one question or passage.</li>
-                            <li>Make sure you are labelling each question by type!</li>
-                            <li>Prioritize time-saving strategies. For example, always check concise answers first; 
-                                if it works, don't spend time worrying about
-                                more complicated answer choices.</li>
+                            <li> 
+                                Remember to use your ACT stopwatch to keep track of time and not
+                                to spend too long on any one question or passage.
+                            </li>
+                            <li>
+                                Make sure you are labelling each question by type!
+                            </li>
+                            <li>
+                                Prioritize time-saving strategies. Always check concise answers first; 
+                                if it works, don't worry about
+                                more complicated answer choices.
+                            </li>
                         </ul>
                     </div>
                 );
@@ -59,7 +65,7 @@ function getTimingFeedback(section, timing, guesses){
 
                 return(
                     <div>
-                        You finished today's test significantly early! Consider the points below when you next meet with your coach.
+                        You finished today's test More than 3 minutes early. Consider the points below when you next meet with your coach.
                         <ul>
                             <li>
                                 The Math section is where students often make the most careless errors! 
@@ -117,7 +123,7 @@ function getTimingFeedback(section, timing, guesses){
 
                 return(
                     <div>
-                        You finished today's test significantly early! Consider the points below when you next meet with your coach.
+                        You finished today's test More than 3 minutes early. Consider the points below when you next meet with your coach.
                         <ul>
                             <li>
                                 You should be able to cite a specific line reference for every detail question. Remember the R in SMART:
@@ -174,12 +180,16 @@ function getTimingFeedback(section, timing, guesses){
 
             return(
                 <div>
-                    You finished today's test significantly early! Consider the points below when you next meet with your coach.
+                    You finished today's test More than 3 minutes early. Review the following with your coach:
                     <ul>
-                        <li>Remember the S in <strong>STOP</strong>: 
-                            Slow down. The English is a section where you can afford to stop and think.</li>
-                        <li>Make sure you are labelling each question by type and that you are applying 
-                            TAC's strategies to each question.</li>
+                        <li>
+                            Your coach will help you develop a plan for quickly analyzing the passage for key items
+                            like variables and trends. Make sure to follow this plan.
+                        </li>
+                        <li>
+                            If you consistently finish early, slow down and pay extra attention to the hardest questions:
+                            New Information and Method questions.
+                        </li>
                     </ul>
                     You had to make <strong>{`${guesses}`}</strong> guesses on today's test.
                 </div>
@@ -192,26 +202,31 @@ function getTimingFeedback(section, timing, guesses){
                     {<span>You ran out of time on today's test and had to guess on <strong>{guesses}</strong> questions as a result. 
                     During your next session, consider the following points with your coach:`</span>}
                     <ul>
-                        <li>Remember to use your ACT stopwatch to keep track of time and not
-                            to spend too long on any one question or passage.</li>
-                        <li>Prioritize time-saving strategies. For example, always check concise answers first; 
-                            if it works, don't spend time worrying about
-                            more complicated answer choices.</li>
+                        <li>
+                            Remember to use your ACT stopwatch to keep track of time and not
+                            to spend too long on any one question or passage.
+                        </li>
+                        <li>
+                            Work on analyzing the passage! We only get a MAX of 90 seconds to understand the passage. Your 
+                            coach will work with you on identifying the most important information quickly. 
+                        </li>
                     </ul>
                 </div>
             );
         } else if(timing === 'slow'){
             return(
                 <div>
-                    {`You marked your test as having no guesses, but you felt rushed and may
-                    have made some errors as a result. During your next session, your coach will review the following:`}
+                    {`You did not have to guess on any questions, but you did feel rushed. 
+                            During your next session, your coach will review the following:`}
                     <ul>
-                        <li> Remember to use your ACT stopwatch to keep track of time and not
-                            to spend too long on any one question or passage.</li>
-                        <li>Make sure you are labelling each question by type!</li>
-                        <li>Prioritize time-saving strategies. For example, always check concise answers first; 
-                            if it works, don't spend time worrying about
-                            more complicated answer choices.</li>
+                        <li> 
+                            Remember to use your ACT stopwatch to keep track of time and not
+                            to spend too long on any one question or passage.
+                        </li>
+                        <li>
+                            Work on analyzing the passage! We only get a MAX of 90 seconds to understand the passage. Your 
+                            coach will work with you on identifying the most important information quickly. 
+                        </li>
                     </ul>
                 </div>
             );

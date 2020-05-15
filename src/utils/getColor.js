@@ -5,7 +5,7 @@ function getColor(score, goal, classes){
         classes should always be passed in and gives
         function access to the component's CSS module
     */
-    if(score >= goal || score >= 34 || score === goal + 1){
+    if(score >= goal || score >= 34 || score === (goal + 1)){
         return classes.green;
     } else if(score + 4 >= goal){
         return classes.orange

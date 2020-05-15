@@ -26,13 +26,13 @@ const feedback = {
             -ing words and to phrases like "to run," since these do not have tense.`,
         'omit/delete': `For questions where you have 3 answers with text and 1 answer that is "OMIT/DELETE", always plug in the OMIT/DELETE
             option first. If it works, don't even worry about the other sections!`,
-        'possessives': `Possessive refer to nouns that own something. For example, "The dog's food" is a possessive phrase.
+        'possessives': `Possessives refer to nouns that own something. For example, "The dog's food" is a possessive phrase.
             Remember that "dog's" indicates one dog owning something, while "dogs'" indicates many. However, we only do this for nouns whose
             plurals end with "s": we would still write "the children's ball", for example. Your coach will work with you through other tricky cases!`,
         'parallelism': `When phrases come in a list, they should be written with the same form. For example, "The man came running, rolling, and jumping
             towards me" demonstrates parallelism, as does "The tall, strange, curly woman lived in the tall, strange, curly house."`,
         'transitions':`Your coach will discuss with you four types of transitions: causation, contrast, addition, and timing. The way to crack
-            transition questions is to decide what kind of transition you need to connect two parts of sentence. Then, eliminate all transitions
+            transition questions is to decide what kind of transition you need to connect two parts of the sentence. Then, eliminate all transitions
             except that type and pick the best answer from what remains.`,
         'pronouns':`Pronoun questions are similar to subject/verb agreement questions: Look for the subject the pronoun is standing in for 
             (also called the antecedent). Make sure if you substitute that word in for the pronoun, the sentence still makes sense. Then,
