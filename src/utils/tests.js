@@ -62,7 +62,7 @@ const a11 = {
                     ['d', 'punctuation'],
                     ['d', 'verb tense'],
                     ['c', 'pronouns'],
-                    ['b', 'ambiguity/vagueness'],
+                    ['b', 'ambiguity / vagueness'],
                     ['d', 'inference'],
                     ['b', 'conciseness'],
                     ['a', 'conciseness'],
@@ -265,7 +265,7 @@ const a11 = {
 }
 
 const e73 = {
-    id: 'e73',
+    id: '73e',
     english:{
         scorescale: [],
         questions: [['d', 'punctuation'],
@@ -308,7 +308,7 @@ const e73 = {
                     ['a', 'vocab in context'],
                     ['b', 'inference'],
                     ['c', 'verb tense'],
-                    ['d', 'adjectives/adverbs'],
+                    ['d', 'adjectives / adverbs'],
                     ['b', 'transitions'],
                     ['a', 'verb tense'],
                     ['b', 'inference'],
@@ -335,13 +335,13 @@ const e73 = {
                     ['b', 'punctuation'],
                     ['b', 'transitions'],
                     ['c', 'conciseness'],
-                    ['a', 'ambiguity/vagueness'],
+                    ['a', 'ambiguity / vagueness'],
                     ['b', 'inference'],
                     ['c', 'transitions'],
                     ['a', 'comparisons'],
                     ['c', 'punctuation'],
                     ['d', 'punctuation'],
-                    ['d', 'adjectives/adverbs'],
+                    ['d', 'adjectives / adverbs'],
                     ['b', 'inference']]
     },
     math: {

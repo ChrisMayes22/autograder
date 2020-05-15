@@ -2,9 +2,9 @@ import React from 'react';
 import classes from './mainHeader.css';
 import NavButton from '../navButton/navButton';
 import { Link } from 'react-router-dom'
+import * as urls from '../../urls/urls';
 
 const mainHeader = (props) => {
-    console.log('SECTION', props.test)
     return(
         <div className = {classes.headContainer}>
             <div className = {classes.flexContainer}>
@@ -15,20 +15,16 @@ const mainHeader = (props) => {
                 />
                 <NavButton 
                     test={props.test}
-                    expectedTest={'e73'}
+                    expectedTest={'73e'}
                     clicked={props.clicked}
                 />
             </div>
             <div className = {[classes.flexContainer, classes.flexContainer__flexEnd].join(' ')}>
-                {props.testActive ?
-                    <React.Fragment>
-                        <button className = {classes.navButton}>Tools</button>
-                        <button className = {classes.navButton} onClick={props.clearHighlight}>Clear Highlight</button>
-                        <Link to=''>
-                            <button className = {classes.navButton} >End Section</button>
-                        </Link>
-                    </React.Fragment>
-                 : null }    
+                <button className = {classes.navButton} onClick={props.wrong}>Fill with Wrong Answers</button>
+                <button className = {classes.navButton} onClick={props.fill}>Fill with Right Answers</button>
+                <Link to={urls.RECAP} onClick={props.endTest}>
+                    <button className = {classes.navButton} >Grade Test</button>
+                </Link>
             </div>
         </div>
     );

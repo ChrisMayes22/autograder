@@ -1,0 +1,80 @@
+.flexContainer {
+    display: flex;
+    margin: 3rem;
+    width: 95vw;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap 
+}
+
+.inlineFlexContainer {
+    display: inline-flex;
+    flex-direction: row;
+    margin: 3rem;
+    width: 95vw;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap 
+}
+
+.sectionButton{
+    margin: 0 1rem;
+    font-family: 'Open Sans';
+    border: 1px rgb(223, 223, 223) solid;
+    font-size: 1.3rem;
+    font-weight: bold;
+    min-height: 4rem;
+    width: 8vw;
+    border-radius: 1rem;
+    background-image: linear-gradient(#FDFDFD,rgb(223,223,223));
+    color:rgb(36, 36, 36);
+}
+
+.sectionButton:hover{
+    cursor: pointer;
+    background-image:none;
+    background-color: #FDFDFD;
+    color: rgb(36, 36, 36)
+}
+
+.selected, .selected:hover {
+    background-image: linear-gradient(#102e79,#0d2561);
+    color: #FDFDFD;
+    border: solid white 2px;
+}
+
+.short {
+    height: 15vh;
+    width: 50%;
+}
+
+.tall {
+    height: 65vh
+}
+
+.small {
+    min-height: 3rem;
+    width: 6vw;
+}
+
+.questionNum{
+    font-size: 2rem;
+    margin: 0 0.8rem;
+    font-weight: 0.8rem;
+}
+
+.goals{
+    font-size: 2rem;
+    font-weight: bold;
+    color: darkblue;
+}
+
+.goals > div > input {
+    min-height: 3.5rem;
+    font-size: 3rem;
+}
+
+.red {
+    color: red;
+}

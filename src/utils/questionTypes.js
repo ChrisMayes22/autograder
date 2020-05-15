@@ -14,9 +14,9 @@ const questionTypes = {
         'transitions':0,
         'pronouns':0,
         'vocab in context':0,
-        'adjectives/adverbs':0,
+        'adjectives / adverbs':0,
         'passive voice':0,
-        'ambiguity/vagueness':0,
+        'ambiguity / vagueness':0,
         'comparisons':0,
         'fixed expressions':0,
         'prepositions':0

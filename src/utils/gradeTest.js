@@ -1,55 +1,30 @@
-const testGrader = {
-    gradeTest(answers, test){
-        // `Recieves answer object and test object for a test SECTION
-        // Returns scorePkg object with wrong answers and score
-        // `
-    
-        function checkAnswers(answers, key){
-            // `Helper function takes an answers array and a key array
-            // and returns an array of wrong answers
-            // `
-            const wrong = []
-            key.forEach((el,i) => {
-                if (el[0] !== answers[i]) { 
-                    wrong.push(key[i]) // key has the format [['a', 'type'],['b', 'type']...etc]
-                }
-            })
-            return wrong;
-        }
-    
-        let wrongAnswers;
-    
-        switch(answers.type){
-            case 'english':
-                wrongAnswers = checkAnswers(answers.letters, test.english.questions);
-                return {
-                    wrong: wrongAnswers,
-                    score: test.english.scorescale[75 - wrongAnswers.length]  // Gives score @ the index i where i == number of CORRECT answers
-                }
-            case 'math':
-                wrongAnswers = checkAnswers(answers.letters, test.math.questions);
-                return {
-                    wrong: wrongAnswers,
-                    score: test.math.scorescale[60 - wrongAnswers.length]  
-                }
-            case 'reading':
-                wrongAnswers = checkAnswers(answers.letters, test.reading.questions);
-                return {
-                    wrong: wrongAnswers,
-                    score: test.reading.scorescale[40 - wrongAnswers.length]  
-                }
-            case 'science':
-                wrongAnswers = checkAnswers(answers.letters, test.science.questions);
-                return {
-                    wrong: wrongAnswers,
-                    score: test.science.scorescale[40 - wrongAnswers.length]  
-                }
-            default:
-                console.log('Err: Answers input not English, Math, Reading, or Science')
-        }
+function gradeTest(answers, section){
+    /* Accepts array of student answers and a test section object
+    (e.g. a11.english, a11.math, etc). Returns an object w/ wrong answers, 
+    types of questions missed and how often, & a scaled score.
+    */
+
+    const scorePkg = {
+        wrong: [],
+        types: {},
+        score: null
     }
+
+    answers.forEach((el, i) => {
+        if(el !== section.questions[i][0]) {   // section...[0] is right answer
+            scorePkg.wrong.push(`#${i+1}`); 
+            if(!scorePkg.types[section.questions[i][1]]){ // section...[1] is question type
+                scorePkg.types[section.questions[i][1]] = 1
+            } else {
+                scorePkg.types[section.questions[i][1]] += 1;
+            }
+        }
+    })
+
+    const rawScore = section.questions.length - scorePkg.wrong.length;
+    scorePkg.score = section.scorescale[rawScore]
+
+    return scorePkg
 }
 
-
-
-export default testGrader
+export default gradeTest

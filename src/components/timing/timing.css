@@ -1,0 +1,25 @@
+.flexContainer{
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-height: 100%;
+}
+
+.onTime{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+}
+
+.green {
+    color: #04B14D;
+}
+
+.red {
+    color: #D0161E;
+}

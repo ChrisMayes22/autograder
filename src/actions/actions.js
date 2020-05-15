@@ -1,5 +1,5 @@
-export const RECORD_STUDENT_ANSWERS = 'RECORD_STUDENT_ANSWERS';
+export const RECORD_STUDENT_RES = 'RECORD_STUDENT_RES';
 
-export const recordStudentAnswers = function(answers){
-    return {type: RECORD_STUDENT_ANSWERS, answers}
+export const recordStudentRes = function(payload){
+    return {type: RECORD_STUDENT_RES, payload}
 }

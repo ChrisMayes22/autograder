@@ -1,0 +1,94 @@
+.scoreBar{
+    width: 90%;
+    display: flex;
+    border-radius: 10px;
+    height: 20px;
+}
+
+.left {
+    width: 25%;
+    background-color: red;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 20px;
+}
+
+.middle {
+    width: 50%;
+    background-color: orange;
+    height: 20px;
+}
+
+.right {
+    width: 25%;
+    background-color: green;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 20px;
+}
+
+.red{
+    color: #D0161E;
+}
+
+.orange{
+    color: rgb(208, 134, 22);
+}
+
+.green{
+    color: #04B14D;
+}
+
+.componentContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrowsContainer{
+    display: flex;
+}
+
+.arrow{
+    margin: 2rem 2px;
+    height: 5rem;
+    width: 2.7%;
+    min-width: 3rem;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+.scoreNum{
+    font-size: 6rem;
+    margin: -2.5rem 0 0 0;
+}
+
+.goalNum{
+    font-size: 4rem;
+    margin: -2.5rem 0 0 0;
+}
+
+.scoreLabel {
+    position: absolute;
+    top: 3rem;
+}
+
+.leftFloat {
+    left: -7rem;
+    font-size: 2.75rem;
+}
+
+.rightFloat {
+    left: 4rem;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.arrowContainer{
+    position: relative;
+}

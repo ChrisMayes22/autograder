@@ -8,7 +8,7 @@ const answerRow = props => {
         lastButton =    <button 
                             onClick={() => props.clicked('e', props.questionNum)}
                             className={[classes.answerButton, props.selectedAnswer === 'e' ? classes.selected : ''].join(' ')}>
-                            E
+                            {props.questionNum %2 !== 0 ? 'K' : 'E'}
                         </button>;
     }
 
@@ -17,24 +17,29 @@ const answerRow = props => {
             <button 
                 onClick={() => props.clicked('a', props.questionNum)}
                 className={[classes.answerButton, props.selectedAnswer === 'a' ? classes.selected : ''].join(' ')}>
-                A
+                {props.questionNum %2 !== 0 ? 'F' : 'A'}
             </button>
             <button 
                 onClick={() => props.clicked('b', props.questionNum)}
                 className={[classes.answerButton, props.selectedAnswer === 'b' ? classes.selected : ''].join(' ')}>
-                B
+                {props.questionNum %2 !== 0 ? 'G' : 'B'}
             </button>
             <button 
                 onClick={() => props.clicked('c', props.questionNum)}
                 className={[classes.answerButton, props.selectedAnswer === 'c' ? classes.selected : ''].join(' ')}>
-                C
+                {props.questionNum %2 !== 0 ? 'H' : 'C'}
             </button>
             <button 
                 onClick={() => props.clicked('d', props.questionNum)}
                 className={[classes.answerButton, props.selectedAnswer === 'd' ? classes.selected : ''].join(' ')}>
-                D
+                {props.questionNum %2 !== 0 ? 'J' : 'D'}
             </button>
             {lastButton}
+            <button 
+                onClick={() => props.clicked(null, props.questionNum)}
+                className={[classes.answerButton, classes.thin, props.selectedAnswer === null ? classes.wrong : ''].join(' ')}>
+                (X)
+            </button>
         </div>
     )
 }

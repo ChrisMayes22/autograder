@@ -30,7 +30,7 @@
     color:gray;
 }
 
-.selected, .navButton:active {
+.selected, .selected:hover {
     background-image: linear-gradient(#102e79,#0d2561);
     color: #FDFDFD;
     border: solid white 2px;

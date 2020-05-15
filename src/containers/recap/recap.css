@@ -1,0 +1,114 @@
+.gridContainer{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-areas: 
+                        "header header header header buttons"
+                        "composite composite composite composite buttons"
+                        "english math reading science buttons";
+    row-gap: 7px;
+    column-gap: 7px;
+    height: 98vh;
+    width: 98vw;
+    margin: 1rem;
+}
+
+.header{
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#102e79,#0d2561);
+    grid-area: header;
+    color: white;
+    font-size: 6rem;
+}
+
+.header > img {
+    height: 87%;
+    margin: 1rem 4rem 1rem 1rem;
+}
+
+.header > h1{
+    font-weight: normal;
+    margin: 0 0 0 3rem;
+}
+
+.composite{
+    background-color: rgb(230, 230, 230);
+    border: 5px solid #102e79;
+    grid-area: composite;
+}
+
+.buttons{
+    background-image: linear-gradient(#102e79,#0d2561);
+    grid-area: buttons;
+}
+
+.section{
+    background-color: rgb(230, 230, 230);
+}
+
+.sectionHeader{
+    top: 0;
+    background-image: linear-gradient(#102e79,#0d2561);;
+    padding: 1rem;
+    text-align: center;
+}
+
+.sectionTitle{
+    display: inline-block;
+    color: white;
+    font-size: 4rem;
+}
+
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    margin: 1rem;
+    font-family: 'Open Sans';
+    border: 1px rgb(223, 223, 223) solid;
+    font-size: 1.3rem;
+    font-weight: bold;
+    min-height: 4rem;
+    width: 8vw;
+    border-radius: 1rem;
+    background-image: linear-gradient(#FDFDFD,rgb(223,223,223));
+    color:rgb(36, 36, 36);
+}
+
+.button:hover {
+    cursor: pointer;
+    background-image:none;
+    background-color: #FDFDFD;
+    color: rgb(36, 36, 36)
+}
+
+.english{
+    grid-area: english;
+}
+
+.math{
+    grid-area: math;
+}
+
+.reading{
+    grid-area: reading;
+}
+
+.science{
+    grid-area: science;
+}
+
+.selected, .selected:hover {
+    background-image: linear-gradient(#102e79,#0d2561);
+    color: #FDFDFD;
+    border: solid white 2px;
+}
