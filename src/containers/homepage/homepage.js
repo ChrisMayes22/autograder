@@ -23,10 +23,10 @@ class Homepage extends Component {
     section: 'english',
     test: tests.a11,
     answers: {
-      english: Array(75).fill('a'),
-      math: Array(60).fill('a'),
-      reading: Array(40).fill('a'),
-      science: Array(40).fill('a')
+      english: Array(75).fill(null),
+      math: Array(60).fill(null),
+      reading: Array(40).fill(null),
+      science: Array(40).fill(null)
     },
     timing: {
       english: 'onTime',
@@ -141,7 +141,13 @@ class Homepage extends Component {
   testSelectionHandler(test){
     let target;
     if(!isNaN(parseInt(test[0]))){
-      test = 'e73'
+      switch(test){
+        case '67f':
+          test = 'f67';
+          break;
+        default:
+          test = 'e73';
+      }
     }
     Object.keys(tests).forEach(el =>{
       if(el === test){
