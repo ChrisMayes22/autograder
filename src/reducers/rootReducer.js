@@ -32,7 +32,7 @@ export function rootReducer(state=initialState, action){
                 }
 
                 if(science.score < 10){
-                    reading.score = 10
+                    science.score = 10
                 }
 
                 if(compositeScore < 10){
