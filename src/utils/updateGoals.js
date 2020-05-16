@@ -8,7 +8,7 @@ function updateGoals(score, goal){
 
     if(score === 36){
         return null
-    } else if(score > goal){
+    } else if(score >= goal){
         switch(score){
             case score < 20:
                 return score + 3;

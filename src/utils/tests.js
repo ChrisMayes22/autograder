@@ -491,7 +491,7 @@ const e73 = {
                     ['d', 'detail'],
                     ['d', 'detail'],
                     ['d', 'detail'],
-                    ['a', 'outside info'],
+                    ['a', 'outside information'],
                     ['b', 'inference'],
                     ['b', 'new information'],
                     ['c', 'detail'],
@@ -732,7 +732,7 @@ const f67 = {
         questions: [
                         ['d' , 'detail'],
                         ['b' , 'trend'],
-                        ['d' , 'outside info'],
+                        ['d' , 'outside information'],
                         ['c' , 'trend'],
                         ['b' , 'detail'],
                         ['d' , 'detail'],
