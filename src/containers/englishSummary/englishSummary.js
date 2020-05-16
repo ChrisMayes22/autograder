@@ -142,7 +142,7 @@ class EnglishSummary extends Component{
                     </div>
                     <div className={classes.errorsContainer}>
                         <Timing time={this.props.timing.english}/>
-                        <div>
+                        <div className={this.props.timing.english === 'onTime' ? classes.medium : null}>
                             {getTimingFeedback('english', this.props.timing.english, this.props.guesses.english)}
                         </div>
                     </div>
