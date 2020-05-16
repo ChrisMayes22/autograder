@@ -13,17 +13,36 @@ export function rootReducer(state=initialState, action){
     switch(action.type){
         case actionTypes.RECORD_STUDENT_RES:
 
-                const english = gradeTest(action.payload.studentAnswers.english, action.payload.test.english);
+                let english = gradeTest(action.payload.studentAnswers.english, action.payload.test.english);
+                let math = gradeTest(action.payload.studentAnswers.math, action.payload.test.math);
+                let reading = gradeTest(action.payload.studentAnswers.reading, action.payload.test.reading);
+                let science = gradeTest(action.payload.studentAnswers.science, action.payload.test.science);
+                let compositeScore = (english.score + math.score + reading.score + science.score)/4
 
-                const math = gradeTest(action.payload.studentAnswers.math, action.payload.test.math);
-                const reading = gradeTest(action.payload.studentAnswers.reading, action.payload.test.reading);
-                const science = gradeTest(action.payload.studentAnswers.science, action.payload.test.science);
-                const compositeScore = (english.score + math.score + reading.score + science.score)/4
+                if(english.score < 10){
+                    english.score = 10
+                }
+
+                if(math.score < 10){
+                    math.score = 10
+                }
+
+                if(reading.score < 10){
+                    reading.score = 10
+                }
+
+                if(science.score < 10){
+                    reading.score = 10
+                }
+
+                if(compositeScore < 10){
+                    compositeScore = 10;
+                }
+
+
                 let compositeGoal = (action.payload.goals.english + action.payload.goals.reading + action.payload.goals.math 
                                         + action.payload.goals.science)/4
-
                 compositeGoal = updateGoals(compositeScore, compositeGoal);
-
                 const goals = {
                     english: updateGoals(english.score, action.payload.goals.english),
                     math: updateGoals(math.score, action.payload.goals.math),
@@ -31,7 +50,9 @@ export function rootReducer(state=initialState, action){
                     science: updateGoals(science.score, action.payload.goals.science)
                 }
                 
-                console.log('GOALS', goals)
+                
+
+
 
                 const newState = {
                     english,
