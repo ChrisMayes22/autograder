@@ -3,7 +3,8 @@ function updateGoals(score, goal){
     and returns an array of the form [score, updatedGoal].
     */
 
-    score = parseInt(score);
+    score = Math.round(parseInt(score));
+    goal = Math.round(parseInt(goal));
 
     if(score === 36){
         return null

@@ -18,6 +18,9 @@
     height: 100%;
     width: 80%;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .questionType{
@@ -32,4 +35,16 @@
     font-weight: bold;
     font-size: 2rem;
     padding: 1rem;
+}
+
+.feedbackText{
+    vertical-align: middle;
+}
+
+.big{
+    font-size: 3.5rem;
+}
+
+.medium { 
+    font-size: 2.5rem;
 }

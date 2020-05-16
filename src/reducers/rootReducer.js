@@ -17,7 +17,7 @@ export function rootReducer(state=initialState, action){
                 let math = gradeTest(action.payload.studentAnswers.math, action.payload.test.math);
                 let reading = gradeTest(action.payload.studentAnswers.reading, action.payload.test.reading);
                 let science = gradeTest(action.payload.studentAnswers.science, action.payload.test.science);
-                let compositeScore = (english.score + math.score + reading.score + science.score)/4
+                let compositeScore = Math.round((english.score + math.score + reading.score + science.score)/4)
 
                 if(english.score < 10){
                     english.score = 10
@@ -40,9 +40,11 @@ export function rootReducer(state=initialState, action){
                 }
 
 
-                let compositeGoal = (action.payload.goals.english + action.payload.goals.reading + action.payload.goals.math 
-                                        + action.payload.goals.science)/4
+                let compositeGoal = Math.round((action.payload.goals.english + action.payload.goals.reading + action.payload.goals.math 
+                                        + action.payload.goals.science)/4)
                 compositeGoal = updateGoals(compositeScore, compositeGoal);
+
+
                 const goals = {
                     english: updateGoals(english.score, action.payload.goals.english),
                     math: updateGoals(math.score, action.payload.goals.math),

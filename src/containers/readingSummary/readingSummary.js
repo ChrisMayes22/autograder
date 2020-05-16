@@ -104,7 +104,7 @@ class ReadingSummary extends Component{
                             sortObjectAttributes(
                                 Object.keys(this.props[this.state.section].types), 
                                 this.props[this.state.section].types
-                            ).map((key, i) => {
+                            ).map((key, i, errors) => {
                                 if(i < 3){
                                     return(
                                         <TypeFeedback
@@ -122,6 +122,7 @@ class ReadingSummary extends Component{
                                                     )[i]
                                                 ]
                                             }
+                                            errors = {errors.length}
                                         />
                                     );
                                 } else {

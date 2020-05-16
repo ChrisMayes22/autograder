@@ -11,6 +11,7 @@ import logo from '../taclogo.png';
 class Recap extends Component{
     
     render(){
+        console.log('COMPOSTE SCORE', this.props.compositeScore, 'COMPOSITE GOAL', this.props.compositeGoal)
         return(
             <section className={classes.gridContainer}>
                 <div className={classes.header}>
@@ -73,10 +74,14 @@ class Recap extends Component{
                         timing={this.props.timing.english}
                         goal={this.props.goals.english}
                     >
-                        {Object.keys(this.props.english.types).length > 0 ? /* Ternary checks if there were any errors */
+                        {Object.keys(this.props.english.types).length === 1 ? /* Ternary checks if there was one error */
+                            `${findBiggestAttr(this.props.english.types).toUpperCase()} QUESTIONS: 
+                            ${this.props.english.types[findBiggestAttr(this.props.english.types)]} Error!` 
+                            : 
+                            Object.keys(this.props.english.types).length > 0 ? /* Ternary checks if there was more than one error */
                             `${findBiggestAttr(this.props.english.types).toUpperCase()} QUESTIONS: 
                             ${this.props.english.types[findBiggestAttr(this.props.english.types)]} Errors!` 
-                            : 
+                            :
                             <span>No errors!</span>
                         } 
                     </SectionSummary>
