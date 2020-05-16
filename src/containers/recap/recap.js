@@ -76,13 +76,13 @@ class Recap extends Component{
                     >
                         {Object.keys(this.props.english.types).length === 1 ? /* Ternary checks if there was one error */
                             `${findBiggestAttr(this.props.english.types).toUpperCase()} QUESTIONS: 
-                            ${this.props.english.types[findBiggestAttr(this.props.english.types)]} Error!` 
+                            ${this.props.english.types[findBiggestAttr(this.props.english.types)]} Error` 
                             : 
                             Object.keys(this.props.english.types).length > 0 ? /* Ternary checks if there was more than one error */
                             `${findBiggestAttr(this.props.english.types).toUpperCase()} QUESTIONS: 
-                            ${this.props.english.types[findBiggestAttr(this.props.english.types)]} Errors!` 
+                            ${this.props.english.types[findBiggestAttr(this.props.english.types)]} Errors` 
                             :
-                            <span>No errors!</span>
+                            <span>No errors</span>
                         } 
                     </SectionSummary>
                 </div>
@@ -99,9 +99,9 @@ class Recap extends Component{
                     >
                         {Object.keys(this.props.math.types).length > 0 ? /* Ternary checks if there were any errors */
                             `QUESTIONS ${findBiggestAttr(this.props.math.types).toUpperCase()}: 
-                            ${this.props.math.types[findBiggestAttr(this.props.math.types)]} Errors!` 
+                            ${this.props.math.types[findBiggestAttr(this.props.math.types)]} Errors` 
                             : 
-                            <span>No errors!</span>
+                            <span>No errors</span>
                         } 
                     </SectionSummary>
                 </div>
@@ -118,9 +118,9 @@ class Recap extends Component{
                     >
                         {Object.keys(this.props.reading.types).length > 0 ? /* Ternary checks if there were any errors */
                             `${findBiggestAttr(this.props.reading.types).toUpperCase()} QUESTIONS: 
-                            ${this.props.reading.types[findBiggestAttr(this.props.reading.types)]} Errors!` 
+                            ${this.props.reading.types[findBiggestAttr(this.props.reading.types)]} Errors` 
                             : 
-                            <span>No errors!</span>
+                            <span>No errors</span>
                         } 
                     </SectionSummary>
                 </div>
@@ -137,9 +137,9 @@ class Recap extends Component{
                     >
                         {Object.keys(this.props.science.types).length > 0 ? /* Ternary checks if there were any errors */
                             `${findBiggestAttr(this.props.science.types).toUpperCase()} QUESTIONS: 
-                            ${this.props.science.types[findBiggestAttr(this.props.science.types)]} Errors!` 
+                            ${this.props.science.types[findBiggestAttr(this.props.science.types)]} Errors` 
                             : 
-                            <span>No errors!</span>
+                            <span>No errors</span>
                         } 
                     </SectionSummary>
                 </div>
