@@ -142,7 +142,7 @@ class ReadingSummary extends Component{
                     </div>
                     <div className={classes.errorsContainer}>
                         <Timing time={this.props.timing.reading}/>
-                        <div>
+                        <div className={this.props.timing.reading === 'onTime' ? classes.medium : null}>
                             {getTimingFeedback('reading', this.props.timing.reading, this.props.guesses.reading)}
                         </div>
                     </div>

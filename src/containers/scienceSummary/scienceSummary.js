@@ -142,7 +142,7 @@ class ScienceSummary extends Component{
                     </div>
                     <div className={classes.errorsContainer}>
                         <Timing time={this.props.timing.science}/>
-                        <div>
+                        <div className={this.props.timing.science === 'onTime' ? classes.medium : null}>
                             {getTimingFeedback('science', this.props.timing.science, this.props.guesses.science)}
                         </div>
                     </div>

@@ -142,7 +142,7 @@ class MathSummary extends Component{
                     </div>
                     <div className={classes.errorsContainer}>
                         <Timing time={this.props.timing.math}/>
-                        <div>
+                        <div className={this.props.timing.math === 'onTime' ? classes.medium : null}>
                             {getTimingFeedback('math', this.props.timing.math, this.props.guesses.math)}
                         </div>
                     </div>

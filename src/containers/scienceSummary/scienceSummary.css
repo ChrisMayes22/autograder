@@ -152,3 +152,8 @@
     justify-content: space-around;
     flex-grow: 1;
 }
+
+.medium {
+    font-size: 3rem;
+    vertical-align: middle;
+}
