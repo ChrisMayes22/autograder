@@ -107,7 +107,7 @@ class Homepage extends Component {
     } else {
       goalsCopy[this.state.section] = goal;
     }
-    if(goal > this.state.answers[this.state.section].length || goal < 11){
+    if(goal > 36 || goal < 11){
       err.push('goals');
     }
     this.setState({ goals: goalsCopy, err });
