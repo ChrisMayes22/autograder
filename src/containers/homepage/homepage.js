@@ -235,7 +235,7 @@ class Homepage extends Component {
             </div>
           </div>
           <div className={classes.goals}>
-            GOAL:
+            SECTION GOAL:
             <div>
               <input onChange={ (e) => this.updateGoalsHandler(e)} type='text' value={this.state.goals[this.state.section]}/>
               <div className={classes.red}>
