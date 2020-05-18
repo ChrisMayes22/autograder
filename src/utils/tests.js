@@ -83,7 +83,7 @@ const a11 = {
                     ['b', 'punctuation'],
                     ['b', 'vocab in context'],
                     ['d', 'modifying clauses'],
-                    ['a', 'possessives'],
+                    ['d', 'possessives'],
                     ['a', 'conciseness'],
                     ['c', 'inference'],
                     ['c', 'yes/no']]
