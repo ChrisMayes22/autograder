@@ -1,6 +1,6 @@
 export const RECAP = '/recap';
-export const ENGLISH_SUMMARY = '/english_summary';
-export const MATH_SUMMARY = '/math_summary';
-export const READING_SUMMARY = '/reading_summary';
-export const SCIENCE_SUMMARY = '/science_summary';
+export const ENGLISH = '/english';
+export const MATH = '/math';
+export const READING = '/reading';
+export const SCIENCE = '/science';
 export const WRONG_ANSWERS = '/wrong_answers';

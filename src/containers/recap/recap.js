@@ -37,22 +37,22 @@ class Recap extends Component{
                     <button className={[classes.button, classes.selected].join(' ')}>
                         COMPOSITE SUMMARY
                     </button>
-                    <Link to={urls.ENGLISH_SUMMARY}>
+                    <Link to={urls.ENGLISH}>
                         <button className={classes.button}>
                             ENGLISH SUMMARY
                         </button>
                     </Link>
-                    <Link to={urls.MATH_SUMMARY}>
+                    <Link to={urls.MATH}>
                         <button className={classes.button}>
                             MATH SUMMARY
                         </button>
                     </Link>
-                    <Link to={urls.READING_SUMMARY}>
+                    <Link to={urls.READING}>
                         <button className={classes.button}>
                             READING SUMMARY
                         </button>
                     </Link>
-                    <Link to={urls.SCIENCE_SUMMARY}>
+                    <Link to={urls.SCIENCE}>
                         <button className={classes.button}>
                             SCIENCE SUMMARY
                         </button>
