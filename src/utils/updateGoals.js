@@ -1,7 +1,5 @@
 function updateGoals(score, goal){
-    /* Accepts a test score and goal as ints
-    and returns an array of the form [score, updatedGoal].
-    */
+    /* Deprecated. Will be removed before next exam. */
 
     score = Math.round(parseInt(score));
     goal = Math.round(parseInt(goal));

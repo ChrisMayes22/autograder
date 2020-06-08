@@ -1,4 +1,11 @@
 const a11 = {
+    /**
+     * Represents a test. Each test has an id,
+     * an English, Math, Reading, and Science section.
+     * Each section contains a score scale and an array
+     * of questions. Questions indicate correct answers
+     * and question type.
+     */
     id: 'a11',
     english:{
         scorescale: [1, 1, 2, 3, 3, 4, 5, 5, 

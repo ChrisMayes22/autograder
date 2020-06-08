@@ -1,6 +1,8 @@
 function findBiggestAttr(obj){
-    /* Accepts an object and returns the attribute
-    with the largest NUMERIC value.
+    /**
+     * @param {Object}; keys are strings, values ints
+     * @return {string}
+     * returns the key of the attribute with the largest value
     */
     const keys = Object.keys(obj);
     let output;

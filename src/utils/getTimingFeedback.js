@@ -1,6 +1,12 @@
 import React from 'react';
 
 function getTimingFeedback(section, timing, guesses){
+    /**
+     * @param {string} section; represents section of the test (english, reading, etc)
+     * @param {string} timing; qualitative measure of student's timing
+     * @param {int} guesses; number of guesses student made
+     * @return {JSX}; React component containing feedback on time management. 
+     */
 
     switch(section){
         case 'english':

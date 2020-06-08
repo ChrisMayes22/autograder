@@ -1,4 +1,8 @@
 const feedback = {
+    /** 
+     * Dictionary whose keys correspond to question types on each section of the ACT.
+     * Values are feedback given when students miss these types of questions.
+     */
     english: {
         'conciseness': `Remember with most questions to prioritize the shortest answer! That means the answer with the fewest words 
             and the least punctuation. Choose these answers if they are grammatically correct. While there are some exceptions, this 

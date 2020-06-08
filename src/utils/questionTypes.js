@@ -1,4 +1,8 @@
 const questionTypes = {
+    /**
+     * Dictionary. Keys are types of questions on each section
+     * and values are the number of errors for that question type
+     */
     english: {
         'conciseness': 0,
         'inference': 0,

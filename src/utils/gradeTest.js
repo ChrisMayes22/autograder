@@ -1,8 +1,10 @@
 function gradeTest(answers, section){
-    /* Accepts array of student answers and a test section object
-    (e.g. a11.english, a11.math, etc). Returns an object w/ wrong answers, 
-    types of questions missed and how often, & a scaled score.
-    */
+    /**
+     * @param {Array} answers; array of student's answers
+     * @param {string} section; i.e. "English" "Math" etc
+     * @return {Object} contains wrong answers, types of questions 
+     * missed (and how often missed), & a scaled score
+     */ 
 
     const scorePkg = {
         wrong: [],

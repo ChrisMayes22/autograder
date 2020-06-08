@@ -1,8 +1,11 @@
 function sortObjectAttributes(keys, obj){
-    /* Accepts an array of keys and an object. Returns
-    an array of keys sorted by the NUMERIC value of the 
-    associated attribute in the object.
-    */
+     /**
+      * @param {Array} keys; all keys are strings
+      * @param {Object} obj; all values are ints
+      * @return {Array}; keys are sorted according to their value.
+      * TODO: Could this be rewritten to just use Object.keys(obj).sort((a,b)...)?
+      */
+
    return keys.sort((a,b) => {
         return obj[b] - obj[a]
    })
