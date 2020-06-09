@@ -1,11 +1,11 @@
 import React from 'react';
-import classes from './sectionSummary.css';
+import classes from './sectionOverview.css';
 import Timing from '../timing/timing';
 import getColor from '../../utils/getColor';
 
 
 
-const sectionSummary = props => {
+const sectionOverview = props => {
     /*  Displays a summary of the student's score, timing, 
         and most-missed question type.
 
@@ -36,4 +36,4 @@ const sectionSummary = props => {
     )
 }
 
-export default sectionSummary
+export default sectionOverview

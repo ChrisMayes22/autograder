@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import classes from './recap.css'
+import classes from './composite.css'
 import { connect } from 'react-redux'; 
-import SectionSummary from '../../components/sectionSummary/sectionSummary';
+import SectionOverview from '../../components/sectionOverview/sectionOverview';
 import Scorebar from '../../components/scorebar/scorebar';
 import findBiggestAttr from '../../utils/findBiggestAttr';
-import * as urls from '../../urls/urls';
 import logo from '../taclogo.png';
+import Sidebar from '../../components/sidebar/sidebar';
 
 class Recap extends Component{
-    
+
     render(){
-        console.log('COMPOSTE SCORE', this.props.compositeScore, 'COMPOSITE GOAL', this.props.compositeGoal)
         return(
             <section className={classes.gridContainer}>
                 <div className={classes.header}>
@@ -25,51 +23,21 @@ class Recap extends Component{
                         </h1>
                     </div>
                     <div className={classes.flexContainer}>
-                        <Scorebar score={this.props.compositeScore} goal={this.props.compositeGoal}/>
+                        <Scorebar 
+                            score={this.props.compositeScore} 
+                            goal={this.props.compositeGoal} 
+                            section="composite"
+                        />
                     </div>     
                 </div>
-                <div className={classes.buttons}>
-                    <Link to={'/'}>
-                        <button className={classes.button}>
-                            START OVER
-                        </button>
-                    </Link>
-                    <button className={[classes.button, classes.selected].join(' ')}>
-                        COMPOSITE SUMMARY
-                    </button>
-                    <Link to={urls.ENGLISH}>
-                        <button className={classes.button}>
-                            ENGLISH SUMMARY
-                        </button>
-                    </Link>
-                    <Link to={urls.MATH}>
-                        <button className={classes.button}>
-                            MATH SUMMARY
-                        </button>
-                    </Link>
-                    <Link to={urls.READING}>
-                        <button className={classes.button}>
-                            READING SUMMARY
-                        </button>
-                    </Link>
-                    <Link to={urls.SCIENCE}>
-                        <button className={classes.button}>
-                            SCIENCE SUMMARY
-                        </button>
-                    </Link>
-                    <Link to={urls.WRONG_ANSWERS}>
-                        <button className={classes.button}>
-                            ERRORS (coaches)
-                        </button>
-                    </Link>
-                </div>
+                <Sidebar section={'composite'}/>
                 <div className={[classes.english, classes.section].join(' ')}>
                     <div className={classes.sectionHeader}>
                         <h1 className={classes.sectionTitle}>
                             ENGLISH
                         </h1>
                     </div>
-                    <SectionSummary 
+                    <SectionOverview 
                         score={this.props.english.score} 
                         timing={this.props.timing.english}
                         goal={this.props.goals.english}
@@ -84,7 +52,7 @@ class Recap extends Component{
                             :
                             <span>No errors</span>
                         } 
-                    </SectionSummary>
+                    </SectionOverview>
                 </div>
                 <div className={[classes.math, classes.section].join(' ')}>
                     <div className={classes.sectionHeader}>
@@ -92,7 +60,7 @@ class Recap extends Component{
                             MATH
                         </h1>
                     </div>
-                    <SectionSummary 
+                    <SectionOverview 
                         score={this.props.math.score} 
                         timing={this.props.timing.math}
                         goal={this.props.goals.math}
@@ -103,7 +71,7 @@ class Recap extends Component{
                             : 
                             <span>No errors</span>
                         } 
-                    </SectionSummary>
+                    </SectionOverview>
                 </div>
                 <div className={[classes.reading, classes.section].join(' ')}>
                     <div className={classes.sectionHeader}>
@@ -111,7 +79,7 @@ class Recap extends Component{
                             READING
                         </h1>
                     </div>
-                    <SectionSummary 
+                    <SectionOverview 
                         score={this.props.reading.score} 
                         timing={this.props.timing.reading}
                         goal={this.props.goals.reading}
@@ -122,7 +90,7 @@ class Recap extends Component{
                             : 
                             <span>No errors</span>
                         } 
-                    </SectionSummary>
+                    </SectionOverview>
                 </div>
                 <div className={[classes.science, classes.section].join(' ')}>
                     <div className={classes.sectionHeader}>
@@ -130,7 +98,7 @@ class Recap extends Component{
                             SCIENCE
                         </h1>
                     </div>
-                    <SectionSummary 
+                    <SectionOverview 
                         score={this.props.science.score} 
                         timing={this.props.timing.science}
                         goal={this.props.goals.science}
@@ -141,7 +109,7 @@ class Recap extends Component{
                             : 
                             <span>No errors</span>
                         } 
-                    </SectionSummary>
+                    </SectionOverview>
                 </div>
             </section>
         );

@@ -8,11 +8,11 @@ import TypeFeedback from '../../components/typeFeedback/typeFeedback';
 import feedback from '../../utils/feedback';
 import getTimingFeedback from '../../utils/getTimingFeedback';
 import sortObjectAttributes from '../../utils/sortObjectAttributes';
+import uniqid from 'uniqid';
 
 class SectionSummary extends Component{
 
     render(){
-        console.log('PARAMS', this.props.match.params.section)
         return(
             <section className={classes.gridContainer}>
                 <div className={classes.composite}>
@@ -25,6 +25,7 @@ class SectionSummary extends Component{
                         <Scorebar 
                             score={this.props[this.props.match.params.section].score} 
                             goal={this.props.goals[this.props.match.params.section]}
+                            section={this.props.match.params.section}
                         />
                     </div>     
                 </div>
@@ -41,7 +42,7 @@ class SectionSummary extends Component{
                             sortObjectAttributes(Object.keys(this.props[this.props.match.params.section].types), 
                             this.props[this.props.match.params.section].types).map(key => {
                                 return(
-                                    <div className={classes.errItem}>
+                                    <div className={classes.errItem} key={uniqid()}>
                                         <span className={classes.errType}>{`${key.toUpperCase()}:`}</span>  
                                         {this.props[this.props.match.params.section].types[key] > 1 ?
                                             `${this.props[this.props.match.params.section].types[key]} Errors`
@@ -71,6 +72,7 @@ class SectionSummary extends Component{
                                 if(i < 3){
                                     return(
                                         <TypeFeedback
+                                            key={uniqid()}
                                             questionType={
                                                 `${sortObjectAttributes( /* Orders question types from most misses to least */
                                                     Object.keys(this.props[this.props.match.params.section].types),

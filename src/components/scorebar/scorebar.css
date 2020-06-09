@@ -50,6 +50,53 @@
 
 .arrowsContainer{
     display: flex;
+    width: 90vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrowContainer{
+    position: relative;
+}
+
+.englishScoreContainer{
+    left: var(--english-score-offset)  /* default defined in html in index.css*/
+}
+
+.englishGoalContainer{
+    left: var(--english-goal-offset)  /* default defined in html in index.css*/
+}
+
+.mathScoreContainer{
+    left: var(--math-score-offset)  /* default defined in html in index.css*/
+}
+
+.mathGoalContainer{
+    left: var(--math-goal-offset)  /* default defined in html in index.css*/
+}
+
+.readingScoreContainer{
+    left: var(--reading-score-offset)  /* default defined in html in index.css*/
+}
+
+.readingGoalContainer{
+    left: var(--reading-goal-offset)  /* default defined in html in index.css*/
+}
+
+.scienceScoreContainer{
+    left: var(--science-score-offset)  /* default defined in html in index.css*/
+}
+
+.scienceGoalContainer{
+    left: var(--science-goal-offset)  /* default defined in html in index.css*/
+}
+
+.compositeScoreContainer{
+    left: var(--composite-score-offset)  /* default defined in html in index.css*/
+}
+
+.compositeGoalContainer{
+    left: var(--composite-goal-offset)  /* default defined in html in index.css*/
 }
 
 .arrow{
@@ -57,6 +104,7 @@
     height: 5rem;
     width: 2.7%;
     min-width: 3rem;
+
 }
 
 .transparent {
@@ -89,6 +137,3 @@
     font-style: italic;
 }
 
-.arrowContainer{
-    position: relative;
-}

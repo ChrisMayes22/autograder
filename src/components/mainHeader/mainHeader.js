@@ -25,7 +25,7 @@ const mainHeader = (props) => {
             <div className = {[classes.flexContainer, classes.flexContainer__flexEnd].join(' ')}>
                 <button className = {classes.navButton} onClick={props.wrong}>Fill with Wrong Answers</button>
                 <button className = {classes.navButton} onClick={props.fill}>Fill with Right Answers</button>
-                <Link to={urls.RECAP} onClick={props.endTest}>
+                <Link to={urls.COMPOSITE} onClick={props.endTest}>
                     <button className = {classes.navButton} >Grade Test</button>
                 </Link>
             </div>

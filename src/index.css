@@ -11,6 +11,16 @@
 
 html {
     font-size: 62.5%;
+    --english-score-offset: 0rem;
+    --english-goal-offset: 50rem;
+    --math-score-offset: 0rem;
+    --math-goal-offset: 50rem;
+    --reading-score-offset: 0rem;
+    --reading-goal-offset: 50rem;
+    --science-score-offset: 0rem;
+    --science-goal-offset: 50rem;
+    --composite-score-offset: 0rem;
+    --composite-goal-offset: 50rem;
 }
 
 body {

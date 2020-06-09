@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import classes from './wrongAnswersView.css'
 import { connect } from 'react-redux'; 
 import PrintRawData from '../../components/printRawData/printRawData'
-import * as urls from '../../urls/urls';
+import Sidebar from '../../components/sidebar/sidebar';
 
 
 
 class WrongAnswersView extends Component{
-
-    state = {
-        section: 'science'
-    }
 
     render(){
         return(
@@ -32,41 +27,7 @@ class WrongAnswersView extends Component{
                     SCIENCE
                     <PrintRawData data={this.props.science.wrong}/>
                 </div>
-                <div className={classes.buttons}>
-                    <Link to={'/'}>
-                        <button className={classes.button}>
-                            START OVER
-                        </button>
-                    </Link>
-                    <Link to={urls.RECAP}>
-                        <button className={classes.button}>
-                            COMPOSITE SUMMARY
-                        </button>
-                    </Link>
-                    <Link to={urls.ENGLISH}>
-                        <button className={classes.button}>
-                            ENGLISH SUMMARY
-                        </button>
-                    </Link>
-                    <Link to={urls.MATH}>
-                        <button className={classes.button}>
-                            MATH SUMMARY
-                        </button>
-                    </Link>
-                    <Link to={urls.READING}>
-                        <button className={classes.button}>
-                            READING SUMMARY
-                        </button>
-                    </Link>
-                    <Link to={urls.SCIENCE}>
-                        <button className={classes.button}>
-                            SCIENCE SUMMARY
-                        </button>
-                    </Link>
-                    <button className={[classes.button, classes.selected].join(' ')}>
-                        ERRORS (coaches)
-                    </button>
-                </div>
+                <Sidebar section={'wrong answers'}/>
             </section>
         );
     }

@@ -68,7 +68,6 @@ export function rootReducer(state=initialState, action){
                     timing: action.payload.timing,
                     guesses: action.payload.guesses
                 }
-                console.log('NEW STATE', newState);
             return newState;
             
         default:
