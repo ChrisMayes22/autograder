@@ -21,6 +21,22 @@ html {
     --science-goal-offset: 50rem;
     --composite-score-offset: 0rem;
     --composite-goal-offset: 50rem;
+    --english-goal-color: rgb(208, 134, 22);
+    --english-score-color: rgb(208, 134, 22);
+    --math-goal-color: rgb(208, 134, 22);
+    --math-score-color: rgb(208, 134, 22);
+    --reading-goal-color: rgb(208, 134, 22);
+    --reading-score-color: rgb(208, 134, 22);
+    --science-goal-color: rgb(208, 134, 22);
+    --science-score-color: rgb(208, 134, 22);
+    --composite-goal-color: rgb(208, 134, 22);
+    --composite-score-color: rgb(208, 134, 22);
+
+    /*
+      red: #D0161E;
+      orange: rgb(208, 134, 22);
+      green: #04B14D;
+    */
 }
 
 body {

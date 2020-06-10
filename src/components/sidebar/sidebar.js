@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './sidebar.css';
-import updateCSSOffset from '../../utils/updateCSSOffset';
 import uniqid from 'uniqid';
+import ControlPanel from '../controlPanel/controlPanel';
 
 const sidebar = props => {
 
@@ -30,18 +30,16 @@ const sidebar = props => {
                     )
                 }
             })}
-            <button className={classes.button} onClick={() => updateCSSOffset(props.section, 'goal', 2)}>
-                Move Goal Right
-            </button>
-            <button className={classes.button} onClick={() => updateCSSOffset(props.section, 'goal', -2)}>
-                Move Goal Left
-            </button>
-            <button className={classes.button} onClick={() => updateCSSOffset(props.section, 'score', 2)}>
-                Move Score Right
-            </button>
-            <button className={classes.button} onClick={() => updateCSSOffset(props.section, 'score', -2)}>
-                Move Score Left
-            </button>
+            <ControlPanel
+                section={props.section}
+                type='goal'
+                value={2}
+            />
+            <ControlPanel
+                section={props.section}
+                type='score'
+                value={2}
+            />
         </div>
     )
 }

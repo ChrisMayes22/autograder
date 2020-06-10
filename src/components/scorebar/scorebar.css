@@ -27,18 +27,6 @@
     height: 20px;
 }
 
-.red{
-    color: #D0161E;
-}
-
-.orange{
-    color: rgb(208, 134, 22);
-}
-
-.green{
-    color: #04B14D;
-}
-
 .componentContainer{
     display: flex;
     flex-direction: column;
@@ -114,6 +102,46 @@
 .scoreNum{
     font-size: 6rem;
     margin: -2.5rem 0 0 0;
+}
+
+.englishGoalColor{
+    color: var(--english-goal-color) /* defined in index.css */
+}
+
+.englishScoreColor{
+    color: var(--english-score-color) /* defined in index.css */
+}
+
+.mathGoalColor{
+    color: var(--math-goal-color) /* defined in index.css */
+}
+
+.mathScoreColor{
+    color: var(--math-score-color) /* defined in index.css */
+}
+
+.readingGoalColor{
+    color: var(--reading-goal-color) /* defined in index.css */
+}
+
+.readingScoreColor{
+    color: var(--reading-score-color) /* defined in index.css */
+}
+
+.scienceGoalColor{
+    color: var(--science-goal-color) /* defined in index.css */
+}
+
+.scienceScoreColor{
+    color: var(--science-score-color) /* defined in index.css */
+}
+
+.compositeGoalColor{
+    color: var(--composite-goal-color) /* defined in index.css */
+}
+
+.compositeScoreColor{
+    color: var(--composite-score-color) /* defined in index.css */
 }
 
 .goalNum{
