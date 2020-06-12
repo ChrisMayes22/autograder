@@ -1,6 +1,6 @@
 .flexContainer {
     display: flex;
-    margin: 3rem;
+    margin: 1rem;
     width: 95vw;
     justify-content: center;
     flex-direction: column;
@@ -11,7 +11,7 @@
 .inlineFlexContainer {
     display: inline-flex;
     flex-direction: row;
-    margin: 3rem;
+    margin: 1rem;
     width: 95vw;
     justify-content: center;
     align-items: center;
