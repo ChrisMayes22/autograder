@@ -40,6 +40,9 @@ const sidebar = props => {
                 type='score'
                 value={2}
             />
+            <button className={classes.button}>
+                UPDATED 6/11
+            </button>
         </div>
     )
 }
