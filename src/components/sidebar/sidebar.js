@@ -13,7 +13,7 @@ const sidebar = props => {
                     START OVER
                 </button>
             </Link>
-            {['composite', 'english', 'reading', 'math', 'science', 'wrong answers'].map(el => {
+            {['composite', 'english', 'math', 'reading', 'science', 'wrong answers'].map(el => {
                 if(props.section === el){
                     return(
                         <button key={uniqid()} className={[classes.button, classes.selected].join(' ')}>

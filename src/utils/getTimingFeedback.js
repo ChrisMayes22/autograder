@@ -21,7 +21,7 @@ function getTimingFeedback(section, timing, guesses){
                             <li>Make sure you are labelling each question by type and that you are applying 
                                 TAC's strategies to each question.</li>
                         </ul>
-                        You had to make <strong>{`${guesses}`}</strong> guesses on today's test.
+                        You had to make <strong>{`${guesses} ${guesses === 1 ? 'guess' : 'guesses'}`}</strong> on today's test.
                     </div>
                     
                 );
@@ -29,8 +29,8 @@ function getTimingFeedback(section, timing, guesses){
                 
                 return(
                     <div>
-                        {<span>You ran out of time on today's test and had to guess on <strong>{guesses}</strong> questions as a result. 
-                        During your next session, consider the following points with your coach:`</span>}
+                        {<span>You ran out of time on today's test and had to guess on <strong>{`${guesses} ${guesses === 1 ? 'question' : 'questions'}`}</strong> 
+                        as a result. During your next session, consider the following points with your coach:`</span>}
                         <ul>
                             <li>Remember to use your ACT stopwatch to keep track of time and not
                                 to spend too long on any one question or passage.</li>
@@ -62,7 +62,7 @@ function getTimingFeedback(section, timing, guesses){
                     </div>
                 );
             } else {
-                return `Nice work on time management! You answered every question with ${guesses} guesses and gave appropriate time
+                return `Nice work on time management! You answered every question with ${`${guesses} ${guesses === 1 ? 'guess' : 'guesses'}`} and gave appropriate time
                         to each question without feeling rushed or having a lot of time left over. Keep it up!`
             }
 
@@ -82,7 +82,7 @@ function getTimingFeedback(section, timing, guesses){
                                 Make sure to follow the time management plan you have developed with your coach.
                             </li>
                         </ul>
-                        You had to make <strong>{`${guesses}`}</strong> guesses on today's test.
+                        You had to make <strong>{`${guesses} ${guesses === 1 ? 'guess' : 'guesses'}`}</strong> on today's test.
                     </div>
                     
                 );
@@ -90,8 +90,8 @@ function getTimingFeedback(section, timing, guesses){
                 
                 return(
                     <div>
-                        {<span>You ran out of time on today's test and had to guess on <strong>{guesses}</strong> questions as a result. 
-                        During your next session, consider the following points with your coach:`</span>}
+                        {<span>You ran out of time on today's test and had to guess on <strong>{`${guesses} ${guesses === 1 ? 'question' : 'questions'}`}</strong> 
+                        as a result. During your next session, consider the following points with your coach:`</span>}
                         <ul>
                             <li>
                                 Remember to use your ACT stopwatch to keep track of time and not
@@ -121,7 +121,7 @@ function getTimingFeedback(section, timing, guesses){
                     </div>
                 );
             } else {
-                return `Nice work on time management! You answered every question with ${guesses} guesses and gave appropriate time
+                return `Nice work on time management! You answered every question with ${`${guesses} ${guesses === 1 ? 'guess' : 'guesses'}`} and gave appropriate time
                         to each question without feeling rushed or having a lot of time left over. Keep it up!`
             }
         case 'reading':
@@ -140,7 +140,7 @@ function getTimingFeedback(section, timing, guesses){
                                  with all question types.
                             </li>
                         </ul>
-                        You had to make <strong>{`${guesses}`}</strong> guesses on today's test.
+                        You had to make <strong>{`${guesses} ${guesses === 1 ? 'guess' : 'guesses'}`}</strong> on today's test.
                     </div>
                     
                 );
@@ -148,8 +148,8 @@ function getTimingFeedback(section, timing, guesses){
                 
                 return(
                     <div>
-                        {<span>You ran out of time on today's test and had to guess on <strong>{guesses}</strong> questions as a result. 
-                        During your next session, consider the following points with your coach:`</span>}
+                        {<span>You ran out of time on today's test and had to guess on <strong>{`${guesses} ${guesses === 1 ? 'question' : 'questions'}`}</strong> 
+                        as a result. During your next session, consider the following points with your coach:`</span>}
                         <ul>
                             <li>
                                 Never spend more than 9 minutes on each passage. Work the easiest questions first, then
@@ -178,7 +178,7 @@ function getTimingFeedback(section, timing, guesses){
                     </div>
                 );
             } else {
-                return `Nice work on time management! You answered every question with ${guesses} guesses and gave appropriate time
+                return `Nice work on time management! You answered every question with ${`${guesses} ${guesses === 1 ? 'guess' : 'guesses'}`} and gave appropriate time
                         to each question without feeling rushed or having a lot of time left over. Keep it up!`
             }
         default /* science */:
@@ -197,7 +197,7 @@ function getTimingFeedback(section, timing, guesses){
                             New Information and Method questions.
                         </li>
                     </ul>
-                    You had to make <strong>{`${guesses}`}</strong> guesses on today's test.
+                    You had to make <strong>{`${guesses} ${guesses === 1 ? 'guess' : 'guesses'}`}</strong> on today's test.
                 </div>
                 
             );
@@ -205,8 +205,8 @@ function getTimingFeedback(section, timing, guesses){
             
             return(
                 <div>
-                    {<span>You ran out of time on today's test and had to guess on <strong>{guesses}</strong> questions as a result. 
-                    During your next session, consider the following points with your coach:`</span>}
+                    {<span>You ran out of time on today's test and had to guess on <strong>{`${guesses} ${guesses === 1 ? 'question' : 'questions'}`}</strong>
+                    as a result. During your next session, consider the following points with your coach:`</span>}
                     <ul>
                         <li>
                             Remember to use your ACT stopwatch to keep track of time and not
@@ -237,8 +237,8 @@ function getTimingFeedback(section, timing, guesses){
                 </div>
             );
         } else {
-            return `Nice work on time management! You answered every question with ${guesses} guesses and gave appropriate time
-                    to each question without feeling rushed or having a lot of time left over. Keep it up!`
+            return `Nice work on time management! You answered every question with ${`${guesses} ${guesses === 1 ? 'guess' : 'guesses'}`}
+                     and gave appropriate time to each question without feeling rushed or having a lot of time left over. Keep it up!`
         }
     }
 

@@ -16,7 +16,7 @@ class SectionSummary extends Component{
         return(
             <section className={classes.gridContainer}>
                 <div className={classes.composite}>
-                    <div className={classes.sectionHeader}>
+                    <div className={classes.pageHeader}>
                         <h1 className={classes.sectionTitle}>
                             {this.props.match.params.section.toUpperCase()} SCORE
                         </h1>

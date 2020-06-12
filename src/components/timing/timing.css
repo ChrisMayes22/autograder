@@ -6,8 +6,9 @@
     justify-content: center;
 }
 
-img {
+.flexContainer > img {
     max-height: 100%;
+    max-width: 100%;
 }
 
 .onTime{
@@ -22,4 +23,29 @@ img {
 
 .red {
     color: #D0161E;
+}
+
+@media only screen and (max-height: 770px){
+    .flexContainer{
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-height: 1550px){
+    .flexContainer > img {
+        width: 50%;
+        height: auto;
+        max-width: none;
+        max-height: none;
+    }
+
+    .onTime{
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 5px 0 0 0;
+    }
 }

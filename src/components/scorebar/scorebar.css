@@ -34,11 +34,12 @@
     height: 100%;
     align-items: center;
     justify-content: center;
+    padding: 3rem 0 2rem 0;
 }
 
 .arrowsContainer{
     display: flex;
-    width: 90vw;
+    width: 90%;
     align-items: center;
     justify-content: center;
 }
@@ -92,15 +93,19 @@
     height: 5rem;
     width: 2.7%;
     min-width: 3rem;
-
 }
 
 .transparent {
     opacity: 0;
 }
 
+.goalNum{
+    font-size: 5rem;
+    margin: -2.5rem 0 0 0;
+}
+
 .scoreNum{
-    font-size: 6rem;
+    font-size: 7rem;
     margin: -2.5rem 0 0 0;
 }
 
@@ -144,11 +149,6 @@
     color: var(--composite-score-color) /* defined in index.css */
 }
 
-.goalNum{
-    font-size: 4rem;
-    margin: -2.5rem 0 0 0;
-}
-
 .scoreLabel {
     position: absolute;
     top: 3rem;
@@ -165,3 +165,21 @@
     font-style: italic;
 }
 
+@media only screen and (min-height: 1180px){
+    .scoreNum{
+        font-size: 12rem;
+    }
+
+    .goalNum{
+        font-size: 8rem;
+    }
+
+    .arrow{
+        height: 7rem;
+        width: 5rem;
+    }
+
+    .rightFloat {
+        left: 6rem;
+    }
+}

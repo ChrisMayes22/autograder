@@ -6,7 +6,7 @@
     margin: 1rem;
     font-family: 'Open Sans';
     border: 1px rgb(223, 223, 223) solid;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: bold;
     height: 10rem;
     width: 8vw;
@@ -65,4 +65,10 @@
 
 .yellowButton:hover{
     background-color: rgb(236, 164, 55);
+}
+
+@media only screen and (max-width: 1480px){
+    .panelRow{
+        font-size: 0.9rem;
+    }
 }

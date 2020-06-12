@@ -1,6 +1,6 @@
 function findBiggestAttr(obj){
     /**
-     * @param {Object}; keys are strings, values ints
+     * @param {Object} obj; keys are strings, values ints
      * @return {string}
      * returns the key of the attribute with the largest value
     */

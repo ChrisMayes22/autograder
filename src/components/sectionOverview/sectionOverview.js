@@ -14,6 +14,11 @@ const sectionOverview = props => {
 
     return(
         <div className={classes.flexContainer}>
+            <div className={classes.sectionHeader}>
+                <h1 className={classes.sectionTitle}>
+                    {props.section.toUpperCase()}
+                </h1>
+            </div>
             <div className={classes.score}>
                 <div className={[classes.sectionScore, getColor(props.score, props.goal, classes)].join(' ')}>
                     {props.score}
