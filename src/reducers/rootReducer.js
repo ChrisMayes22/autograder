@@ -1,5 +1,6 @@
 import * as actionTypes from '../actions/actions';
 import gradeTest from '../utils/gradeTest';
+import resetCSSVars from '../utils/resetCSSVars';
 import updateCSSOffset from '../utils/updateCSSOffset';
 import updateCSSColors from '../utils/updateCSSColors'
 
@@ -13,6 +14,8 @@ const initialState = {
 export function rootReducer(state=initialState, action){
     switch(action.type){
         case actionTypes.RECORD_STUDENT_RES:
+
+                resetCSSVars();
 
                 let english = gradeTest(action.payload.studentAnswers.english, action.payload.test.english);
                 let math = gradeTest(action.payload.studentAnswers.math, action.payload.test.math);
