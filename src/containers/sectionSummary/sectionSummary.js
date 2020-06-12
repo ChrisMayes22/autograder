@@ -24,7 +24,7 @@ class SectionSummary extends Component{
                     <div className={classes.flexContainer}>
                         <Scorebar 
                             score={this.props[this.props.match.params.section].score} 
-                            goal={this.props.goals[this.props.match.params.section]}
+                            goal={this.props[this.props.match.params.section].goal}
                             section={this.props.match.params.section}
                         />
                     </div>     
@@ -106,12 +106,12 @@ class SectionSummary extends Component{
                         </h1>
                     </div>
                     <div className={classes.errorsContainer}>
-                        <Timing time={this.props.timing[this.props.match.params.section]}/>
+                        <Timing time={this.props[this.props.match.params.section].timing}/>
                         <div className={this.props.timing[this.props.match.params.section] === 'onTime' ? classes.medium : null}>
                             {getTimingFeedback(
                                 this.props.match.params.section, 
-                                this.props.timing[this.props.match.params.section], 
-                                this.props.guesses[this.props.match.params.section]
+                                this.props[this.props.match.params.section].timing, 
+                                this.props[this.props.match.params.section].guesses,
                             )}
                         </div>
                     </div>

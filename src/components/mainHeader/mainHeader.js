@@ -20,7 +20,6 @@ const mainHeader = (props) => {
                         />
                     )
                 })}
-                />
             </div>
             <div className = {[classes.flexContainer, classes.flexContainer__flexEnd].join(' ')}>
                 <button className = {classes.navButton} onClick={props.wrong}>Fill with Wrong Answers</button>

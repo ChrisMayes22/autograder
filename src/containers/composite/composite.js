@@ -24,8 +24,8 @@ class Recap extends Component{
                     </div>
                     <div className={classes.flexContainer}>
                         <Scorebar 
-                            score={this.props.compositeScore} 
-                            goal={this.props.compositeGoal} 
+                            score={this.props.composite.score} 
+                            goal={this.props.composite.goal} 
                             section="composite"
                         />
                     </div>     
@@ -36,8 +36,8 @@ class Recap extends Component{
                         <div className={[classes[section], classes.section].join(' ')}>
                             <SectionOverview 
                                 score={this.props[section].score} 
-                                timing={this.props.timing[section]}
-                                goal={this.props.goals[section]}
+                                timing={this.props[section].timing} 
+                                goal={this.props[section].goal} 
                                 section={section}
                             >
                                 {

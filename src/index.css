@@ -12,15 +12,15 @@
 html {
     font-size: 62.5%;
     --english-score-offset: 0rem;
-    --english-goal-offset: 50rem;
+    --english-goal-offset: 0rem;
     --math-score-offset: 0rem;
-    --math-goal-offset: 50rem;
+    --math-goal-offset: 0rem;
     --reading-score-offset: 0rem;
-    --reading-goal-offset: 50rem;
+    --reading-goal-offset: 0rem;
     --science-score-offset: 0rem;
-    --science-goal-offset: 50rem;
+    --science-goal-offset: 0rem;
     --composite-score-offset: 0rem;
-    --composite-goal-offset: 50rem;
+    --composite-goal-offset: 0rem;
     --english-goal-color: rgb(208, 134, 22);
     --english-score-color: rgb(208, 134, 22);
     --math-goal-color: rgb(208, 134, 22);
