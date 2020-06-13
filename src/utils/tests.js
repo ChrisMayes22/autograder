@@ -1315,7 +1315,7 @@ const z15 = {
                         ['c','inference'],
                         ['c','prepositions'],
                         ['c','pronouns'],
-                        ['c','inference'],
+                        ['b','inference'],
                         ['d','conciseness'],
                         ['a','yes/no'],
                         ['c','punctuation'],
