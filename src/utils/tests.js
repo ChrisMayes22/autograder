@@ -1045,9 +1045,9 @@ const b05 = {
         scorescale: [
             1, 1, 2, 3, 4, 4, 5, 5, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 10,
             11, 11, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 15, 15, 16, 16,
-            17, 17, 18, 18, 19, 19, 20, 20, 20, 21, 21, 21, 22, 22, 22, 23, 23,
+            17, 17, 18, 18, 19, 19, 20, 20, 20, 21, 21, 21, 22, 22, 22, 23, 23, 23,
             24, 24, 24, 25, 25, 26,26, 27, 28, 29, 30, 31, 32, 33, 34, 34, 35, 35, 35, 35,
-            36, 36, 36,
+            36, 36, 36
         ],
         questions: [
                     ['A','parallelism'],
@@ -1130,7 +1130,7 @@ const b05 = {
     math: {
         scorescale: [
                         1, 4, 6, 8, 9, 10, 11, 12, 12, 13, 13, 14, 14, 14, 14,
-                        15, 15, 15, 16, 16, 16, 17, 17, 18, 18, 18, 19, 20, 20,
+                        15, 15, 15, 16, 16, 16, 16, 17, 17, 18, 18, 18, 19, 20, 20,
                         21, 22, 22, 23, 24, 24, 25, 25, 26, 26, 26, 27, 27, 28, 28, 28,
                         29, 29, 30, 30, 31, 31, 32, 33, 33, 34, 35, 35, 35, 36, 36
                     ],
@@ -1249,7 +1249,7 @@ const b05 = {
     science: {
         scorescale: [
                         1, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 17, 18, 18,
-                        19 ,19, 20, 21, 21, 22, 23, 24, 25, 25, 26, 27, 28, 29, 30,
+                        19 ,19, 20, 21, 21, 22, 23, 23, 24, 24, 25, 25, 26, 27, 28, 29, 30,
                         31, 33, 34, 35, 36, 36 
         ],
         questions: [
@@ -1787,13 +1787,17 @@ const c61 = {
 }
 
 
-export default {
-    a11,
-    e73,
-    a09,
-    f67,
-    z15,
-    b05,
-    c61
-}
+console.log('ENGLISH', b05.english.scorescale.length, 'Math', b05.math.scorescale.length, 'Reading', b05.reading.scorescale.length, 'science', b05.science.scorescale.length,)
+console.log('ENGLISH', a11.english.scorescale.length, 'Math', a11.math.scorescale.length, 'Reading', a11.reading.scorescale.length, 'science', a11.science.scorescale.length,)
+console.log('ENGLISH', z15.english.scorescale.length, 'Math', z15.math.scorescale.length, 'Reading', z15.reading.scorescale.length, 'science', z15.science.scorescale.length,)
+
+// export default {
+//     a11,
+//     e73,
+//     a09,
+//     f67,
+//     z15,
+//     b05,
+//     c61
+// }
   
