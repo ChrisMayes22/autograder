@@ -1298,13 +1298,6 @@ const b05 = {
 }
 
 const z15 = {
-    /**
-     * Represents a test. Each test has an id,
-     * an English, Math, Reading, and Science section.
-     * Each section contains a score scale and an array
-     * of questions. Questions indicate correct answers
-     * and question type.
-     */
     id: 'z15',
     english:{
         scorescale: [1, 1, 2, 3, 3, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 10, 11, 11, 11, 12, 12, 13, 13, 14, 14, 

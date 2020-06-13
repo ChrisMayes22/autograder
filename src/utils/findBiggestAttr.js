@@ -7,9 +7,12 @@ function findBiggestAttr(obj){
     const keys = Object.keys(obj);
     let output;
     for(let i = 0; i < keys.length; i++){
+        console.log('KEY', keys[i], 'VALUE', obj[keys[i]])
+        console.log('OUTPUT', output)
         if(!output){
             output = keys[i]
-        } else if(obj[keys[i]] > output){
+        }
+        if(obj[keys[i]] > obj[output]){
             output = keys[i]
         }
     }

@@ -40,6 +40,8 @@ class Recap extends Component{
                                 goal={this.props[section].goal} 
                                 section={section}
                             >
+                                {console.log(this.props[section].types)}
+                                {console.log('SECTION', section, 'BIIGEST', findBiggestAttr(this.props[section].types))}
                                 {
                                     Object.keys(this.props[section].types).length === 1 ? /* Ternary checks if there was one error */
                                     `${findBiggestAttr(this.props[section].types).toUpperCase()} QUESTIONS: 
