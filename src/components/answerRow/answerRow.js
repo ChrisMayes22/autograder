@@ -6,8 +6,8 @@ const answerRow = props => {
     let lastButton = null;
     if(props.section === 'math'){
         lastButton =    <button 
-                            onClick={() => props.clicked('e', props.questionNum)}
-                            className={[classes.answerButton, props.selectedAnswer === 'e' ? classes.selected : ''].join(' ')}>
+                            onClick={() => props.clicked('E', props.questionNum)}
+                            className={[classes.answerButton, props.selectedAnswer === 'E' ? classes.selected : ''].join(' ')}>
                             {props.questionNum %2 !== 0 ? 'K' : 'E'}
                         </button>;
     }
@@ -15,23 +15,23 @@ const answerRow = props => {
     return(
         <div className={classes.answers}>
             <button 
-                onClick={() => props.clicked('a', props.questionNum)}
-                className={[classes.answerButton, props.selectedAnswer === 'a' ? classes.selected : ''].join(' ')}>
+                onClick={() => props.clicked('A', props.questionNum)}
+                className={[classes.answerButton, props.selectedAnswer === 'A' ? classes.selected : ''].join(' ')}>
                 {props.questionNum %2 !== 0 ? 'F' : 'A'}
             </button>
             <button 
-                onClick={() => props.clicked('b', props.questionNum)}
-                className={[classes.answerButton, props.selectedAnswer === 'b' ? classes.selected : ''].join(' ')}>
+                onClick={() => props.clicked('B', props.questionNum)}
+                className={[classes.answerButton, props.selectedAnswer === 'B' ? classes.selected : ''].join(' ')}>
                 {props.questionNum %2 !== 0 ? 'G' : 'B'}
             </button>
             <button 
-                onClick={() => props.clicked('c', props.questionNum)}
-                className={[classes.answerButton, props.selectedAnswer === 'c' ? classes.selected : ''].join(' ')}>
+                onClick={() => props.clicked('C', props.questionNum)}
+                className={[classes.answerButton, props.selectedAnswer === 'C' ? classes.selected : ''].join(' ')}>
                 {props.questionNum %2 !== 0 ? 'H' : 'C'}
             </button>
             <button 
-                onClick={() => props.clicked('d', props.questionNum)}
-                className={[classes.answerButton, props.selectedAnswer === 'd' ? classes.selected : ''].join(' ')}>
+                onClick={() => props.clicked('D', props.questionNum)}
+                className={[classes.answerButton, props.selectedAnswer === 'D' ? classes.selected : ''].join(' ')}>
                 {props.questionNum %2 !== 0 ? 'J' : 'D'}
             </button>
             {lastButton}

@@ -145,6 +145,9 @@ class Homepage extends Component {
         case '67f':
           test = 'f67';
           break;
+        case '61c':
+          test = 'c61';
+          break;
         default:
           test = 'e73';
       }
@@ -158,9 +161,11 @@ class Homepage extends Component {
   }
 
   insertCorrectAnswers(){
+    console.log(this.state);
     const answers = {...this.state.answers};
     const correctAnswers = [...this.state.test[this.state.section].questions.map(el => el[0])];
     answers[this.state.section] = correctAnswers;
+    console.log('ANSWERS', answers)
     this.setState({ answers });
   }
 
