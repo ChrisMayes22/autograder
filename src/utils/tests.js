@@ -1319,7 +1319,7 @@ const z15 = {
                         ['D','conciseness'],
                         ['A','yes/no'],
                         ['C','punctuation'],
-                        ['B','concisness'],
+                        ['B','conciseness'],
                         ['A','comparisons'],
                         ['A','yes/no'],
                         ['D','conciseness'],
