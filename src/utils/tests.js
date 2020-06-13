@@ -1787,17 +1787,13 @@ const c61 = {
 }
 
 
-console.log('ENGLISH', b05.english.scorescale.length, 'Math', b05.math.scorescale.length, 'Reading', b05.reading.scorescale.length, 'science', b05.science.scorescale.length,)
-console.log('ENGLISH', a11.english.scorescale.length, 'Math', a11.math.scorescale.length, 'Reading', a11.reading.scorescale.length, 'science', a11.science.scorescale.length,)
-console.log('ENGLISH', z15.english.scorescale.length, 'Math', z15.math.scorescale.length, 'Reading', z15.reading.scorescale.length, 'science', z15.science.scorescale.length,)
-
-// export default {
-//     a11,
-//     e73,
-//     a09,
-//     f67,
-//     z15,
-//     b05,
-//     c61
-// }
+export default {
+    a11,
+    e73,
+    a09,
+    f67,
+    z15,
+    b05,
+    c61
+}
   
