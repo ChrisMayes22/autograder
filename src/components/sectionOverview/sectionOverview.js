@@ -25,9 +25,7 @@ const sectionOverview = props => {
                 </div>
             </div>
             <div className={classes.timing}>
-                <div>
-                    <Timing time={props.timing}/>
-                </div>
+                <Timing time={props.timing}/>
             </div>
             <div className={classes.mostMissed}>
                 <h2>
