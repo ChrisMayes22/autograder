@@ -136,7 +136,7 @@ function getTimingFeedback(section, timing, guesses){
                                 Research as much as needed!
                             </li>
                             <li>
-                                Don't rush the initial read! Although annotating for NIFT takes time, it can make a bigg difference
+                                Don't rush the initial read! Although annotating for NIFT takes time, it can make a big difference
                                  with all question types.
                             </li>
                         </ul>
