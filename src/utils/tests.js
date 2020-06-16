@@ -1359,7 +1359,7 @@ const z15 = {
                         ['A','conciseness'],
                         ['D','conciseness'],
                         ['D','conciseness'],
-                        ['B','transitons'],
+                        ['B','transitions'],
                         ['A','punctuation'],
                         ['B','inference'],
                         ['D','verb tense'],
