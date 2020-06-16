@@ -1354,7 +1354,7 @@ const z15 = {
                         ['A','punctuation'],
                         ['D','punctuation'],
                         ['A','possessives'],
-                        ['A','inference '],
+                        ['A','inference'],
                         ['C','punctuation'],
                         ['A','conciseness'],
                         ['D','conciseness'],
