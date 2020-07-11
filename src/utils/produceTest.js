@@ -1,13 +1,17 @@
-/**
- * Takes a string of capitalized answers
- * Returns an array of arrays, where
- * the first term of each array is the answer
- * And the second term if an empty string
- * 
- * @param string MUST contain no capital letters but the answers.
- * Answers must be capitalized.
- * All other chars can/will be ignored.
- */
+function parseDebrief(debrief){
+    splitDebrief = debrief.replace( /\n/g, " " ).replace("  ", " ").split( " " )
+    result = []
+    answers = ['(A)', '(B)', '(C)', '(D)', '(E)', '(F)', '(G)', '(H)', '(J)', '(K)']
+    for (let i = 0; i < splitDebrief.length; i++){
+        if(answers.includes(splitDebrief[i])){
+            result.push([splitDebrief[i].replace('(', "").replace(')', "")
+            .replace('F', 'A').replace('G', 'B').replace('H', 'C').replace('J', 'D').replace('K', 'E'), 
+            splitDebrief[i+1].toLowerCase()])
+        }
+    }
+    result
+    return result
+}
 console.log(`   
 
 
@@ -17,23 +21,23 @@ console.log(`
 
 /**
  * Takes a scorescale string and returns a scorescale array.
+ * GO FROM 0 - 75 or REVERSE
  */
-const scoreScale =`
-
-` .split('\n')
+const scoreScale =`0 - 1 - 2 - 3 4 5 6 7 8 9-10 11 12 13-14 15 16-17 18-19 20-21 22-23 24-25 26-27 28-29 30
+31-32 33 34 35 36 37 - 38 39 - 40`.replace( /\n/g, " " ).split( " " )
     .map(el => {
         if(el.length === 2){
             return [el];
         } else {
             return el.split('-')
         }
-    }).reverse();
+    });
 
 const newScoreScale = []
 
 scoreScale.forEach((el, i) => {
     console.log(el);
-    if(el.includes('—')){
+    if(el.includes('-')){
         console.log('skipped');
     } else if (el.length === 1) {
         newScoreScale.push(i+1)
