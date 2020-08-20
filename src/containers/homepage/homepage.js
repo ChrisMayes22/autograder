@@ -151,6 +151,12 @@ class Homepage extends Component {
         case '72F':
           test = 'f72'
           break;
+        case '70G':
+          test = 'g70'
+          break;
+        case '63f':
+          test = 'f63'
+          break;
         default:
           test = 'e73';
       }
