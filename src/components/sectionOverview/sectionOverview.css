@@ -23,6 +23,11 @@
 }
 
 .sectionHeader{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
     top: 0;
     background-image: linear-gradient(#102e79,#0d2561);;
     text-align: center;
@@ -33,7 +38,7 @@
 .sectionTitle{
     display: inline-block;
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .timing{

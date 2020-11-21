@@ -9,6 +9,7 @@ import feedback from '../../utils/feedback';
 import getTimingFeedback from '../../utils/getTimingFeedback';
 import sortObjectAttributes from '../../utils/sortObjectAttributes';
 import uniqid from 'uniqid';
+import sectionLabelMap from '../../utils/sectionLabelMap';
 
 class SectionSummary extends Component{
 
@@ -18,7 +19,7 @@ class SectionSummary extends Component{
                 <div className={classes.composite}>
                     <div className={classes.pageHeader}>
                         <h1 className={classes.sectionTitle}>
-                            {this.props.match.params.section.toUpperCase()} SCORE
+                            {sectionLabelMap[this.props.match.params.section].toUpperCase()} SCORE
                         </h1>
                     </div>
                     <div className={classes.flexContainer}>
@@ -29,7 +30,7 @@ class SectionSummary extends Component{
                         />
                     </div>     
                 </div>
-                <Sidebar section={this.props.match.params.section}/>
+                <Sidebar section={this.props.match.params.section} availableSections={this.props.availableSections}/>
                 <div className={[classes.questionTypes, classes.section].join(' ')}>
                     <div className={classes.sectionHeader}>
                         <h1 className={classes.sectionTitle}>
@@ -70,6 +71,7 @@ class SectionSummary extends Component{
                                 this.props[this.props.match.params.section].types
                             ).map((key, i, errors) => {
                                 if(i < 3){
+                                    console.log('MATCH', this.props.match)
                                     return(
                                         <TypeFeedback
                                             key={uniqid()}

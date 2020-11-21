@@ -14,7 +14,7 @@ class Recap extends Component{
             <section className={classes.gridContainer}>
                 <div className={classes.header}>
                     <img src={logo} alt={'TAC Logo'}/>
-                    <h1>ACT SIMULATION REPORT</h1>
+                    <h1>{this.props.availableSections.includes('english') ? 'ACT SIMULATION REPORT' : 'SAT SIMULATION REPORT'}</h1>
                 </div>
                 <div className={classes.composite}>
                     <div className={classes.sectionHeader}>
@@ -30,8 +30,8 @@ class Recap extends Component{
                         />
                     </div>     
                 </div>
-                <Sidebar section={'composite'}/>
-                    {['english', 'math', 'reading', 'science'].map(section => {
+                <Sidebar section={'composite'} availableSections={this.props.availableSections}/>
+                    {this.props.availableSections.map(section => {
                         return(
                         <div className={[classes[section], classes.section].join(' ')}>
                             <SectionOverview 
@@ -40,8 +40,6 @@ class Recap extends Component{
                                 goal={this.props[section].goal} 
                                 section={section}
                             >
-                                {console.log(this.props[section].types)}
-                                {console.log('SECTION', section, 'BIIGEST', findBiggestAttr(this.props[section].types))}
                                 {
                                     Object.keys(this.props[section].types).length === 1 ? /* Ternary checks if there was one error */
                                     `${findBiggestAttr(this.props[section].types).toUpperCase()} QUESTIONS: 

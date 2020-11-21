@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './sectionOverview.css';
 import Timing from '../timing/timing';
 import getColor from '../../utils/getColor';
+import sectionLabelMap from '../../utils/sectionLabelMap'
 
 
 
@@ -16,7 +17,7 @@ const sectionOverview = props => {
         <div className={classes.flexContainer}>
             <div className={classes.sectionHeader}>
                 <h1 className={classes.sectionTitle}>
-                    {props.section.toUpperCase()}
+                    {sectionLabelMap[props.section].toUpperCase()}
                 </h1>
             </div>
             <div className={classes.score}>

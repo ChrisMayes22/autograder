@@ -7,6 +7,7 @@ import { recordStudentRes } from '../../actions/actions';
 import tests from '../../utils/tests';
 import classes from './homepage.css';
 import uniqid from 'uniqid';
+import sectionLabelMap from '../../utils/sectionLabelMap';
 
 
 class Homepage extends Component {
@@ -22,30 +23,33 @@ class Homepage extends Component {
   state = {
     section: 'english',
     test: tests.a11,
+    availableSections: ['english', 'math', 'reading', 'science'],
     answers: {
       english: Array(75).fill(null),
       math: Array(60).fill(null),
       reading: Array(40).fill(null),
-      science: Array(40).fill(null)
+      science: Array(40).fill(null),
     },
     timing: {
       english: 'onTime',
       math: 'onTime',
       reading: 'onTime',
-      science: 'onTime'
+      science: 'onTime',
     }, 
     goals: {
       english: 25,
       math: 25,
       reading: 25,
-      science: 25
+      science: 25,
     },
     guesses: {
       english: 0,
       math: 0,
       reading: 0,
-      science: 0
+      science: 0,
     },
+    upperLimit: 36,
+    lowerLimit: 10,
     err: []
   }
 
@@ -75,16 +79,31 @@ class Homepage extends Component {
         wrongAnswers = questionTypes.science;
         points = 40;
         break;
+      case 'satWriting':
+        wrongAnswers = questionTypes.english;
+        points = 44; 
+        break;
+      case 'satReading':
+        wrongAnswers = questionTypes.reading;
+        points = 52;
+        break;
+      case 'satMath1':
+        wrongAnswers = questionTypes.satMath1;
+        points = 20;
+        break;
+      case 'satMath2':
+        wrongAnswers = questionTypes.satMath2;
+        points = 38;
+        break;
       default:
         console.log('ERR! input was not section')
     }
 
     const stateCopy = {...this.state,
                   wrongAnswers,
-                  section,
-                  points
+                  points,
+                  section
                 };
-
     this.setState(stateCopy)
   }
 
@@ -107,7 +126,7 @@ class Homepage extends Component {
     } else {
       goalsCopy[this.state.section] = goal;
     }
-    if(goal > 36 || goal < 11){
+    if(goal > this.state.upperLimit || goal < this.state.lowerLimit){
       err.push('goals');
     }
     this.setState({ goals: goalsCopy, err });
@@ -166,15 +185,87 @@ class Homepage extends Component {
         target = tests[el]
       }
     })
-    this.setState({ test: target });
+    let newState = {
+      section: 'english',
+      test: target,
+      availableSections: ['english', 'math', 'reading', 'science'],
+      answers: {
+        english: Array(75).fill(null),
+        math: Array(60).fill(null),
+        reading: Array(40).fill(null),
+        science: Array(40).fill(null),
+      },
+      timing: {
+        english: 'onTime',
+        math: 'onTime',
+        reading: 'onTime',
+        science: 'onTime',
+
+      }, 
+      goals: {
+        english: 25,
+        math: 25,
+        reading: 25,
+        science: 25,
+
+      },
+      guesses: {
+        english: 0,
+        math: 0,
+        reading: 0,
+        science: 0,
+      },
+      upperLimit: 36,
+      lowerLimit: 10,
+      err: []
+    }
+    if(test.toLowerCase().includes('sat')){
+      newState = {
+        section: 'satReading',
+        test: target,
+        availableSections: ['satReading', 'satWriting', 'satMath1', 'satMath2'],
+        answers: {
+          satReading: Array(52).fill(null),
+          satWriting: Array(44).fill(null),
+          satMath1: Array(20).fill(null),
+          satMath2: Array(38).fill(null)
+        },
+        timing: {
+          satReading: 'onTime',
+          satWriting: 'onTime',
+          satMath1: 'onTime',
+          satMath2: 'onTime'
+        }, 
+        goals: {
+          satReading: 400,
+          satWriting: 400,
+          satMath1: 800,
+          satMath2: 800
+        },
+        guesses: {
+          satReading: 0,
+          satWriting: 0,
+          satMath1: 0,
+          satMath2: 0
+        },
+        upperLimit: 800,
+        lowerLimit: 100,
+        err: []
+      }
+    }
+    this.setState(newState);
   }
 
   insertCorrectAnswers(){
-    console.log(this.state);
     const answers = {...this.state.answers};
-    const correctAnswers = [...this.state.test[this.state.section].questions.map(el => el[0])];
+    const correctAnswers = [...this.state.test[this.state.section].questions.map(el => {
+      if(Array.isArray(el)){
+        return el[0]
+      } else {
+        return el
+      }
+    })];
     answers[this.state.section] = correctAnswers;
-    console.log('ANSWERS', answers)
     this.setState({ answers });
   }
 
@@ -204,26 +295,15 @@ class Homepage extends Component {
         />
         <div className={classes.inlineFlexContainer}>
           <div className={[classes.inlineFlexContainer, classes.short].join(' ')}>
-            <button 
-              className={[classes.sectionButton, this.state.section === 'english' ? classes.selected : null].join(' ')}
-              onClick={() => this.chooseSection('english')}>
-              English
-            </button>
-            <button 
-              className={[classes.sectionButton, this.state.section === 'math' ? classes.selected : null].join(' ')}
-              onClick={() => this.chooseSection('math')}>
-              Math
-            </button>
-            <button 
-              className={[classes.sectionButton, this.state.section === 'reading' ? classes.selected : null].join(' ')}
-              onClick={() => this.chooseSection('reading')}>
-              Reading
-            </button>
-            <button 
-              className={[classes.sectionButton, this.state.section === 'science' ? classes.selected : null].join(' ')}
-              onClick={() => this.chooseSection('science')}>
-              Science
-            </button>
+            {this.state.availableSections.map((section, i) => {
+              return(
+                <button 
+                  className={[classes.sectionButton, this.state.section === `${section}` ? classes.selected : null].join(' ')}
+                  onClick={() => this.chooseSection(`${section}`)} key={uniqid()}>
+                  {`${sectionLabelMap[section]}`}
+                </button>
+              )
+            })}
             <div className={classes.inlineFlexContainer}>
               <button className={[
                   classes.sectionButton, 
@@ -253,7 +333,7 @@ class Homepage extends Component {
             <div>
               <input onChange={ (e) => this.updateGoalsHandler(e)} type='text' value={this.state.goals[this.state.section]}/>
               <div className={classes.red}>
-                {this.state.err.includes('goals') ? `Goals must be between 11 and 36.` : null}
+                {this.state.err.includes('goals') ? `Goals must be between ${this.state.lowerLimit} and ${this.state.upperLimit}.` : null}
               </div>
             </div>
             GUESSES:
@@ -267,7 +347,8 @@ class Homepage extends Component {
         </div>
         <div className={[classes.flexContainer, classes.tall].join(' ')}>
           {this.state.test[this.state.section].questions.map((el,i) => {
-            return (
+            if(['A', 'B', 'C', 'D', 'E'].includes(el[0])){
+              return (
                 <span key={uniqid()}>
                   <span className={classes.questionNum}>{i+1}) </span>
                   <AnswerRow 
@@ -279,6 +360,22 @@ class Homepage extends Component {
                   />
                 </span> 
             )
+            } else {
+              return(
+                <span key={uniqid()}>
+                  <span className={classes.questionNum}>{i+1}) </span>
+                  <select value={this.state.answers[this.state.section][i] === el[0] ? el[0] : 'wrong'} onChange={(e) => this.answerChoiceHandler(e.target.value, i) }>
+                    <option>
+                      {el[0]}
+                    </option>
+                    <option value={null}>
+                      wrong
+                    </option>
+                  </select>
+                </span> 
+              )
+            }
+            
           })}
         </div>
       </div>

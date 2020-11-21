@@ -32,6 +32,24 @@ html {
     --composite-goal-color: rgb(208, 134, 22);
     --composite-score-color: rgb(208, 134, 22);
 
+    --satWriting-score-offset: 0rem;
+    --satWriting-goal-offset: 0rem;
+    --satReading-score-offset: 0rem;
+    --satReading-goal-offset: 0rem;
+    --satMath1-score-offset: 0rem;
+    --satMath1-goal-offset: 0rem;
+    --satMath2-score-offset: 0rem;
+    --satMath2-goal-offset: 0rem;
+    --satReading-goal-color: rgb(208, 134, 22);
+    --satReading-score-color: rgb(208, 134, 22);
+    --satWriting-goal-color: rgb(208, 134, 22);
+    --satWriting-score-color: rgb(208, 134, 22);
+    --satMath1-goal-color: rgb(208, 134, 22);
+    --satMath1-score-color: rgb(208, 134, 22);
+    --satMath2-goal-color: rgb(208, 134, 22);
+    --satMath2-score-color: rgb(208, 134, 22);
+
+
     /*
       red: #D0161E;
       orange: rgb(208, 134, 22);

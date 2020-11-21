@@ -12,7 +12,7 @@
     margin: 1rem;
 }
 
-.english{
+.col {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -20,43 +20,26 @@
     padding:1rem;
     max-height: 90vh;
     border: solid black 5px;
+}
+
+.english, .satReading{
     grid-area: english;
 }
 
-.english > div, .math > div, .reading > div, .science > div {
+.english > div, .math > div, .reading > div, .science > div, .science > div, 
+.satReading > div, .satWriting > div, .satMath1 > div, .satMath2 > div {
     font-size: 2.5rem;
 }
 
-.math{
-    display: flex;
-    max-height: 90vh;
-    border: solid black 5px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-size: 1rem;
-    padding:1rem;
+.math, .satWriting{
     grid-area: math;
 }
 
-.reading{
-    display: flex;
-    border: solid black 5px;
-    max-height: 90vh;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-size: 1rem;
-    padding:1rem;
+.reading, .satMath1 {
     grid-area: reading;
 }
 
-.science{
-    display: flex;
-    border: solid black 5px;
-    max-height: 90vh;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-size: 1rem;
-    padding:1rem;
+.science, .satMath2 {
     grid-area: science;
 }
 

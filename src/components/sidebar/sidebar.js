@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import classes from './sidebar.css';
 import uniqid from 'uniqid';
 import ControlPanel from '../controlPanel/controlPanel';
+import sectionLabelMap from '../../utils/sectionLabelMap';
 
 const sidebar = props => {
-
+    console.log('AVAILABLE SECTIONS:', props.availableSections)
     return(
         <div className={classes.buttons}>
             <Link to={'/'}>
@@ -13,18 +14,18 @@ const sidebar = props => {
                     START OVER
                 </button>
             </Link>
-            {['composite', 'english', 'math', 'reading', 'science', 'wrong answers'].map(el => {
+            {['composite', ...props.availableSections, 'wrong answers'].map(el => {
                 if(props.section === el){
                     return(
                         <button key={uniqid()} className={[classes.button, classes.selected].join(' ')}>
-                            {el.toUpperCase()} SUMMARY
+                            {sectionLabelMap[el].toUpperCase()} SUMMARY
                         </button>
                     )
                 } else {
                     return(
                         <Link key={uniqid()} to={`/${el}`}>
                             <button className={classes.button}>
-                                {el.toUpperCase()} SUMMARY
+                                {sectionLabelMap[el].toUpperCase()} SUMMARY
                             </button>
                         </Link>
                     )
@@ -41,7 +42,7 @@ const sidebar = props => {
                 value={2}
             />
             <button className={classes.button}>
-                UPDATED 6/13
+                UPDATED 11/21
             </button>
         </div>
     )

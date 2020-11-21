@@ -9,25 +9,18 @@ import Sidebar from '../../components/sidebar/sidebar';
 class WrongAnswersView extends Component{
 
     render(){
+        console.log('AVAILABLE SECTIONS:', this.props.availableSections)
         return(
             <section className={classes.gridContainer}>
-                <div className={classes.english}>
-                    ENGLISH
-                    <PrintRawData data={this.props.english.wrong}/>
-                </div>
-                <div className={classes.math}>
-                    MATH
-                    <PrintRawData data={this.props.math.wrong}/>
-                </div>
-                <div className={classes.reading}>
-                    READING
-                    <PrintRawData data={this.props.reading.wrong}/>
-                </div>
-                <div className={classes.science}>
-                    SCIENCE
-                    <PrintRawData data={this.props.science.wrong}/>
-                </div>
-                <Sidebar section={'wrong answers'}/>
+                {this.props.availableSections.map(section => {
+                    return (
+                        <div className={[classes[section], classes.col].join(' ')}>
+                            {section.toUpperCase()}
+                            <PrintRawData data={this.props[section].wrong}/>
+                        </div>
+                    )
+                })}
+                <Sidebar section={'wrong answers'} availableSections={this.props.availableSections}/>
             </section>
         );
     }

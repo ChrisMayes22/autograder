@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './controlPanel.css';
-import updateCSSOffset from '../../utils/updateCSSOffset';
-import updateCSSColors from '../../utils/updateCSSColors'
+import updateCSSOffset from '../../utils/CSShandlers/updateCSSOffset';
+import updateCSSColors from '../../utils/CSShandlers/updateCSSColors';
 
 const controlPanel = props => {
     return(

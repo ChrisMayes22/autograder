@@ -88,6 +88,72 @@
     left: var(--composite-goal-offset)  /* default defined in html in index.css*/
 }
 
+.satReadingScoreContainer{
+    left: var(--satReading-score-offset)  /* default defined in html in index.css*/
+}
+
+.satReadingGoalContainer{
+    left: var(--satReading-goal-offset)  /* default defined in html in index.css*/
+}
+
+.satWritingScoreContainer{
+    left: var(--satWriting-score-offset)  /* default defined in html in index.css*/
+}
+
+.satWritingGoalContainer{
+    left: var(--satWriting-goal-offset)  /* default defined in html in index.css*/
+}
+
+.satMath1ScoreContainer{
+    left: var(--satMath1-score-offset)  /* default defined in html in index.css*/
+}
+
+.satMath1GoalContainer{
+    left: var(--satMath1-goal-offset)  /* default defined in html in index.css*/
+}
+
+.satMath2ScoreContainer{
+    left: var(--satMath2-score-offset)  /* default defined in html in index.css*/
+}
+
+.satMath2GoalContainer{
+    left: var(--satMath2-goal-offset)  /* default defined in html in index.satReading */
+}
+
+/**/
+
+.satReadingScoreColor{
+    color: var(--satReading-score-color)  /* default defined in html in index.css*/
+}
+
+.satReadingGoalColor{
+    color: var(--satReading-goal-color)  /* default defined in html in index.css*/
+}
+
+.satWritingScoreColor{
+    color: var(--satWriting-score-color)  /* default defined in html in index.css*/
+}
+
+.satWritingGoalColor{
+    color: var(--satWriting-goal-color)  /* default defined in html in index.css*/
+}
+
+.satMath1ScoreColor{
+    color: var(--satMath1-score-color)  /* default defined in html in index.css*/
+}
+
+.satMath1GoalColor{
+    color: var(--satMath1-goal-color)  /* default defined in html in index.css*/
+}
+
+.satMath2ScoreColor{
+    color: var(--satMath2-score-color)  /* default defined in html in index.css*/
+}
+
+.satMath2GoalColor{
+    color: var(--satMath2-goal-color)  /* default defined in html in index.satReading */
+}
+
 .arrow{
     margin: 2rem 2px;
     height: 5rem;
