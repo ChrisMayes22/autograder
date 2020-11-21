@@ -1,6 +1,6 @@
 import React from 'react';
 
-function getTimingFeedback(section, timing, guesses){
+function getTimingFeedback(_, timing, guesses){ // TODO: Get rid of first param across program
     /**
      * @param {string} section; represents section of the test (english, reading, etc)
      * @param {string} timing; qualitative measure of student's timing

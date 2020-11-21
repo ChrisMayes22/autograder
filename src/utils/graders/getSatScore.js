@@ -2,6 +2,7 @@
 import gradeTest from './gradeTest';
 
 function getSatScore(studentAnswers, test, goals, timing, guesses){
+    console.log('GUESSES', guesses)
     const scoreReport = {}
     const standardSubjects = ['satReading', 'satWriting']
     standardSubjects.forEach(subject => {
@@ -35,6 +36,7 @@ function getSatScore(studentAnswers, test, goals, timing, guesses){
         goal: goals.satMath1,
         timing: timing.satMath1,
         wrong: math1Errors,
+        guesses: guesses.satMath1,
         types: {}
     }
 
@@ -51,8 +53,11 @@ function getSatScore(studentAnswers, test, goals, timing, guesses){
         goal: goals.satMath2,
         timing: timing.satMath2,
         wrong: math2Errors,
+        guesses: guesses.satMath2,
         types: {}
     }
+
+    console.log('MATH 2', satMath2)
 
     mathTypeKeys.forEach(key => {
         if(!key.includes('no-calc')){
