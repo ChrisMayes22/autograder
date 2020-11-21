@@ -24,7 +24,7 @@ function gradeTest(answers, section){
     })
 
     const rawScore = section.questions.length - scorePkg.wrong.length;
-    scorePkg.score = section.scorescale[rawScore]
+    scorePkg.score = section.scoreScale[rawScore]
 
     return scorePkg
 }
