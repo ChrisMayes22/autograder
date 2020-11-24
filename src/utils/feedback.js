@@ -170,18 +170,18 @@ const feedback = {
             indicated by the BE question, so only research in those excerpts!`
     },
     satMath1:{
-        'grid-ins (no-calc)': `Remember to complete these questions first and to spend no more than 7 minutes on this section. Your coach will help you take
+        'grid-ins (no calculator)': `Remember to complete these questions first and to spend no more than 7 minutes on this section. Your coach will help you take
             advantage of some of the unique features of this section! For example, you always know that negative numbers are not valid answers on the 
             grid-ins.`,
-        '1-15 (no-calc)': `Remember to SURVIVE on the math calculator active. This section accounts for only a third of the total points on your math score. 
+        '1-15 (no calculator)': `Remember to SURVIVE on the math calculator active. This section accounts for only a third of the total points on your math score. 
             Use SUPERB strategies liberally, since it is especially important to keep calculations minimal when you have no calculator, and prioritize the
             first, easiest questions on this section.`
     },
     satMath2:{
-        '1-15 (calc-active)': `The calculator-active section of the SAT Math is where you can THRIVE, since almost two thirds of your points come from this section.
+        '1-15 (calculator active)': `The calculator-active section of the SAT Math is where you can THRIVE, since almost two thirds of your points come from this section.
             1-15 are particularly important because they are the easiest in the section but count just as much as later questions. Your coach will work with you
             to make the most of these questions!`,
-        'grid-ins (calc-active)': `As with the no-calculator section, the grid-ins present a unique challenge in that some SUPERB strategies are harder to implement. However,
+        'grid-ins (calculator active)': `As with the no calculator section, the grid-ins present a unique challenge in that some SUPERB strategies are harder to implement. However,
             you also have unique strategies available, such as eliminating negative answer choices and irrational numbers like pi or e. Your coach
             will review these strategies with you.`,
         '16-30': `These questions are the hardest on the SAT Math. It is especially critical to consistently make judicious use of SUPERB strategies.

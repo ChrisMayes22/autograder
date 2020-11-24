@@ -54,10 +54,10 @@ const questionTypes = {
     },
     math1: {  // SAT
         'grid-ins':0,
-        '1-15':0,
+        '1-15 (no calculator)':0,
     },
     math2: {
-        '1-15': 0,
+        '1-15 (calculator active)': 0,
         'grid-ins': 0,
         '16-30': 0
     },

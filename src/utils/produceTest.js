@@ -14,57 +14,60 @@ function parseDebrief(debrief){
 
 // // ENGLISH, READING, SCIENCE
 // console.log(parseDebrief(`
-// (A) Punctuation → c
-// (C) Inference → ne
-// (B) Inference → ne
-// (A) Omit / Delete 
-// (B) Conciseness → 
-// (A) Inference → ne
-// (B) Punctuation → 
-// (D) Transitions → 
-// (C) Punctuation →
-// (B) Placement → se
-// (D) Subject / Verb
+// Writing and Language 
+// Passage 1
+//  (A) Parallelism
+//  (D) Inference 
+//  (A) Punctuation
+//  (A) Punctuation
+//  (D) Inference
+//  (A) Transitions
+//  (C) Modifying Clauses
+//  (D) Conciseness 
+//  (D) Omit/Delete
+//  (C) Punctuation
+//  (C) Inference
 
 // Passage 2
-// (A) Punctuation → 
-// (B) Vocab in Conte
-// (D) Placement → Si
-// (C) Punctuation → 
-// “By regulating wat
-// (C) Yes/No → First
-// (A) Vocab in Conte
-// (B) Subject/Verb A
-// (A) Verb Tense → W
-// (A) Inference → In
-// (C) Inference → Ou
-// (C) Punctuation → 
+//  (D) Parallelism 
+//  (A) Inference 
+//  (D) Possessives
+//  (C) Conciseness 
+//  (B) Inference
+//  (B) Vocab in Context
+//  (A) Vocab in Context
+//  (D) Punctuation
+//  (B) Modifying Clauses
+//  (C) Inference
+//  (B) Inference
 
 // Passage 3
-// (A) Possessives/Co
-// (B) Prepositions 
-// (C) Vocab in Conte
-// (D) Pronouns → No 
-// (B) Ambiguity/Vagu
-// (C) Keep/Delete → 
-// (B) Verb Tense/Par
-// (B) Placement → Th
-// (D) Inference → On
-// (C) Conciseness → 
-// (A) Inference → Ou
+//  (C) Subject/Verb Agreement
+//  (A) Conciseness 
+//  (A) Punctuation
+//  (B) Prepositions 
+//  (D) Inference
+//  (B) Punctuation
+//  (C) Inference 
+//  (C) Inference/Transitions
+//  (B) Inference
+//  (B) Pronouns
+//  (A) Inference
 
 // Passage 4
-// (C) Inference → Th
-// (D) Punctuation → 
-// (B) Punctuation → 
-// (C) Inference → In
-// (C) Passive Voice 
-// (B) Transitions → 
-// (D) Inference → If
-// (A) Inference → Th
-// (D) Vocab in Conte
-// (C) Prepositions/P
-// (D) Pronouns → The
+//  (C) Inference/Transitions 
+//  (D) Inference
+//  (C) Possessives
+//  (B) Subject/Verb Agreement
+//  (C) Inference
+//  (C) Punctuation
+//  (D) Punctuation
+//  (A) Vocab in Context
+//  (D) Conciseness
+//  (A) Prepositions
+//  (D) Placement 
+
+
 
 
 // `))
@@ -72,45 +75,36 @@ function parseDebrief(debrief){
 
 // FOR MATH SECTIONS
 console.log(`   
-(C) 
-(A) 
-(D) 
-(C) 
-(C) 
-(D) 
-(A) 
 (B) 
-(B) 
-(C) 
-(A) 
-(C) 
-(B) 
-(C) 
-(B) 
-(D) 
-(D) 
-(B) 
-(D) 
-(B) 
-(B) 
-(A) 
-(D) 
-(C) 
-(A) 
-(C) 
-(A) 
-(D) 
-(A) 
-(D) 
-11 Simplify → 
-10 Simplify →
-½, .5 Simplif
-2 Simplify → 
-20 Simplify →
-65 Simplify → 
-88 Simplify → 1 hour.
-2.1,21/10 Sim
-
+ (A)
+ (B)
+ (C)
+ (C)
+ (D)
+ (B)
+ (C)
+ (C)
+ (D)
+ (A)
+ (C)
+ (C)
+ (A)
+ (B)
+ (C)
+ (D)
+ (C)
+ (D)
+ (C)
+ (B)
+ (D)
+ (A)
+ (B)
+ (A)
+ (D)
+ (A)
+ (D)
+ (D)
+ (A)
 
 
 
@@ -126,6 +120,16 @@ console.log(`
         return []
     }
 }));
+
+console.log(` 6
+146
+2500
+34
+2.5 or 5/2 
+6.25 or 25/4
+293
+9
+` )
 
 // FOR SCORE SCALES
 /**

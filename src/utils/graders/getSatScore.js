@@ -60,8 +60,10 @@ function getSatScore(studentAnswers, test, goals, timing, guesses){
     console.log('MATH 2', satMath2)
 
     mathTypeKeys.forEach(key => {
-        if(!key.includes('no-calc')){
+        if(!key.includes('no calculator')){
             satMath2.types[key] = mathReport.types[key]
+        } else {
+            satMath1.types[key] = mathReport.types[key]
         }
     })
 
