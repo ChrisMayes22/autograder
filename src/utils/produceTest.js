@@ -14,58 +14,51 @@ function parseDebrief(debrief){
 
 // // ENGLISH, READING, SCIENCE
 // console.log(parseDebrief(`
-// Writing and Language 
-// Passage 1
-//  (A) Parallelism
-//  (D) Inference 
-//  (A) Punctuation
-//  (A) Punctuation
-//  (D) Inference
-//  (A) Transitions
-//  (C) Modifying Clauses
-//  (D) Conciseness 
-//  (D) Omit/Delete
-//  (C) Punctuation
-//  (C) Inference
+// (A) Trend
+// (J) Trend
+// (D) Detail
+// (G) Outside Information
+// (D) Trend
+// (G) Detail
 
-// Passage 2
-//  (D) Parallelism 
-//  (A) Inference 
-//  (D) Possessives
-//  (C) Conciseness 
-//  (B) Inference
-//  (B) Vocab in Context
-//  (A) Vocab in Context
-//  (D) Punctuation
-//  (B) Modifying Clauses
-//  (C) Inference
-//  (B) Inference
+// (B) Method
+// (G) Trend
+// (A) Trend
+// (H) Method
+// (D) Detail
+// (H) New Information
+// (B) New Information
 
-// Passage 3
-//  (C) Subject/Verb Agreement
-//  (A) Conciseness 
-//  (A) Punctuation
-//  (B) Prepositions 
-//  (D) Inference
-//  (B) Punctuation
-//  (C) Inference 
-//  (C) Inference/Transitions
-//  (B) Inference
-//  (B) Pronouns
-//  (A) Inference
+// (G) Trend
+// (B) Detail
+// (H) New Information
+// (A) Detail
+// (F) New Information
+// (C) New Information
+// (F) New Information
 
-// Passage 4
-//  (C) Inference/Transitions 
-//  (D) Inference
-//  (C) Possessives
-//  (B) Subject/Verb Agreement
-//  (C) Inference
-//  (C) Punctuation
-//  (D) Punctuation
-//  (A) Vocab in Context
-//  (D) Conciseness
-//  (A) Prepositions
-//  (D) Placement 
+// (C) Trend
+// (F) Method
+// (D) Detail
+// (H) Detail
+// (B) New Information
+// (J) Method
+// (B) New Information
+
+// (H) Detail
+// (C) Trend
+// (J) Detail
+// (B) Detail
+// (F) Detail
+// (A) Detail
+
+// (F) Detail
+// (C) Detail
+// (F) Detail
+// (B) Detail
+// (J) Detail
+// (B) Detail
+// (F) Detail
 
 
 
@@ -75,61 +68,92 @@ function parseDebrief(debrief){
 
 // FOR MATH SECTIONS
 console.log(`   
+(E) 
+(H) 
 (B) 
- (A)
- (B)
- (C)
- (C)
- (D)
- (B)
- (C)
- (C)
- (D)
- (A)
- (C)
- (C)
- (A)
- (B)
- (C)
- (D)
- (C)
- (D)
- (C)
- (B)
- (D)
- (A)
- (B)
- (A)
- (D)
- (A)
- (D)
- (D)
- (A)
+(J) 
+(A) 
+(F) 
+(B) 
+(H) 
+(C) 
+(J) 
+(C) 
+(H) 
+(E) 
+(H) 
+(D) 
+(F) 
+(C) 
+(G) 
+(A) 
+(J) 
+(B) 
+(H) 
+(A) 
+(F) 
+(C) 
+(F) 
+(E) 
+(H) 
+(E) 
+(F) 
+(B) 
+(K) 
+(C) 
+(J) 
+(D) 
+(K) 
+(E) 
+(K) 
+(B) 
+(H) 
+(B) 
+(F) 
+(D) 
+(G) 
+(D) 
+(H) 
+(A) 
+(G) 
+(D) 
+(J) 
+(E) 
+(J) 
+(E) 
+(G) 
+(D) 
+(J) 
+(A) 
+(G) 
+(E) 
+(K) 
 
 
 
 
-// `.split('').filter(el => {
+
+`.split('').filter(el => {
     return ['A','B','C','D','E','F','G','H','J','K'].includes(el)
 }).map((el, i) => {
-    if(i < 16){
-        return [el.replace('F', 'A').replace('G', 'B').replace('H', 'C').replace('J', 'D').replace('K', 'E'), '1-15'] 
-    } else if(i < 31) {
-        return [el.replace('F', 'A').replace('G', 'B').replace('H', 'C').replace('J', 'D').replace('K', 'E'), '16-30']
+    if(i < 21){
+        return [el.replace('F', 'A').replace('G', 'B').replace('H', 'C').replace('J', 'D').replace('K', 'E'), '1-20'] 
+    } else if(i < 41) {
+        return [el.replace('F', 'A').replace('G', 'B').replace('H', 'C').replace('J', 'D').replace('K', 'E'), '21-40']
     } else { 
-        return []
+        return [el.replace('F', 'A').replace('G', 'B').replace('H', 'C').replace('J', 'D').replace('K', 'E'), '41-60']
     }
 }));
 
-console.log(` 6
-146
-2500
-34
-2.5 or 5/2 
-6.25 or 25/4
-293
-9
-` )
+// console.log(` 6
+// 146
+// 2500
+// 34
+// 2.5 or 5/2 
+// 6.25 or 25/4
+// 293
+// 9
+// ` )
 
 // FOR SCORE SCALES
 /**
