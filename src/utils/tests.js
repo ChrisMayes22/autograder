@@ -65,7 +65,7 @@ const b04 = {
             ['B', 'yes/no'],
             ['A', 'conciseness'],
             ['B', 'prepositions'],
-            ['B', 'subject'],
+            ['B', 'subject/verb agreement'],
             ['D', 'inference'],
             ['C', 'vagueness'],
             ['B', 'inference'],
