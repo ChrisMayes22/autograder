@@ -44,13 +44,13 @@ const feedback = {
         'vocab in context':`These are called vocab in CONTEXT for a reason! Don't just rely on the dictionary definition of the words: look at the 
             surrounding sentence. Is it positive in tone, or negative? Make sure to plug your answer in and read the sentence as a whole. If there are 
             2 or more vocabulary terms you don't know at all, don't spend too long on the question: guess and move on.`,
-        'adjectives / adverbs': `Adjectives describe nouns, while adverbs describe verbs (actions) and adjectives (descriptions). For example, in the
+        'adjectives/adverbs': `Adjectives describe nouns, while adverbs describe verbs (actions) and adjectives (descriptions). For example, in the
             sentence "Adrian is quite green and likes to run quickly," green is an adjective, while quickly and quite are adverbs. If you see answer choices
             like "quickly" and quick, determine if it is describing an action or a noun.`,
         'passive voice': `If a sentence is in passive voice, that means that action is being done TO the subject. For example, "I was carried by my friends" 
             is in passive voice, as is "The paper was finally written." The ACT does not like passive voice! Always look for an active sentence, like
             "My friends carried me" or "I wrote the paper."`,
-        'ambiguity / vagueness':`This is one of the rare exceptions to conciseness. If a word is so vague that you can't form a mental image of it,
+        'ambiguity/vagueness':`This is one of the rare exceptions to conciseness. If a word is so vague that you can't form a mental image of it,
             choose a more specific answer! For example, if you see three pronouns in answer choices and "the professor of meteorology," the answer with
             the professor is correct even though it is not at all concise!`,
         'comparisons':`Remember that "than" is used for comparisons, as in "Alaska is bigger THAN Colorado," while "then" is used to describe time. Meanwhile,
