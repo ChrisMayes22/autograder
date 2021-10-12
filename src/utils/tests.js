@@ -983,7 +983,7 @@ const b02 = {
             [ 'B', 'placement' ],
             [ 'B', 'conciseness' ],
             [ 'D', 'inference' ],
-            [ 'C', 'transition' ],
+            [ 'C', 'transitions' ],
             [ 'A', 'omit/delete' ],
             [ 'D', 'punctuation' ],
             [ 'A', 'vocab in context' ],
