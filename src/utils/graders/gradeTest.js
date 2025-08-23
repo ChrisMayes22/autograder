@@ -8,12 +8,18 @@ function gradeTest(answers, section){
 
     const scorePkg = {
         wrong: [],
+        ungraded:[],
         types: {},
         score: null
     }
 
     answers.forEach((el, i) => {
-        if(el !== section.questions[i][0]) {   // section...[0] is right answer
+        console.log('questions:', section.questions);
+        console.log('answers', answers)
+        if(!section.questions[i][2]) {  // questions is ungraded
+            const wasCorrect = el !== section.questions[i][0] ? 'correct' : 'wrong';
+            scorePkg.ungraded.push(`#${i+1}: ${wasCorrect}`)
+        } else if(el !== section.questions[i][0]) {   // section...[0] is right answer
             scorePkg.wrong.push(`#${i+1}`); 
             if(!scorePkg.types[section.questions[i][1]]){ // section...[1] is question type
                 scorePkg.types[section.questions[i][1]] = 1
@@ -23,7 +29,7 @@ function gradeTest(answers, section){
         }
     })
 
-    const rawScore = section.questions.length - scorePkg.wrong.length;
+    const rawScore = section.questions.length - (scorePkg.wrong.length + scorePkg.ungraded.length);
     scorePkg.score = section.scoreScale[rawScore]
 
     return scorePkg

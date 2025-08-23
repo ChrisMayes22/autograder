@@ -17,6 +17,10 @@ class WrongAnswersView extends Component{
                         <div className={[classes[section], classes.col].join(' ')}>
                             {section.toUpperCase()}
                             <PrintRawData data={this.props[section].wrong}/>
+                            <br/>
+                            <br/>
+                            <h1>UNGRADED QUESTIONS:</h1>
+                            <PrintRawData data={this.props[section].ungraded}/>
                         </div>
                     )
                 })}

@@ -25,9 +25,9 @@ class Homepage extends Component {
     test: tests.a11,
     availableSections: ['english', 'math', 'reading', 'science'],
     answers: {
-      english: Array(75).fill(null),
-      math: Array(60).fill(null),
-      reading: Array(40).fill(null),
+      english: Array(50).fill(null),
+      math: Array(45).fill(null),
+      reading: Array(36).fill(null),
       science: Array(40).fill(null),
     },
     timing: {
@@ -65,15 +65,15 @@ class Homepage extends Component {
     switch(section){
       case 'english':
         wrongAnswers = questionTypes.english;
-        points = 75; // Max of 75 questions right on the English
+        points = 50; // Max of 75 questions right on the English
         break;
       case 'math':
         wrongAnswers = questionTypes.math;
-        points = 60;
+        points = 45;
         break;
       case 'reading':
         wrongAnswers = questionTypes.reading;
-        points = 40;
+        points = 36;
         break;
       case 'science':
         wrongAnswers = questionTypes.science;
@@ -190,9 +190,9 @@ class Homepage extends Component {
       test: target,
       availableSections: ['english', 'math', 'reading', 'science'],
       answers: {
-        english: Array(75).fill(null),
-        math: Array(60).fill(null),
-        reading: Array(40).fill(null),
+        english: Array(50).fill(null),
+        math: Array(45).fill(null),
+        reading: Array(36).fill(null),
         science: Array(40).fill(null),
       },
       timing: {
@@ -256,6 +256,68 @@ class Homepage extends Component {
     this.setState(newState);
   }
 
+  toggleScienceHandler(){
+    let newState;
+    if(this.state.availableSections.includes('science')){
+      newState = {
+        section: 'english',
+        test: this.state.test,
+        availableSections: ['english', 'math', 'reading'],
+        answers: {
+          english: this.state.answers.english,
+          math: this.state.answers.math,
+          reading:  this.state.answers.reading,
+        },
+        timing: {
+          english: this.state.timing.english,
+          math:  this.state.timing.math,
+          reading:  this.state.timing.english,
+        }, 
+        goals: {
+          english: this.state.goals.english,
+          math: this.state.goals.math,
+          reading: this.state.goals.reading,
+        },
+        guesses: {
+          english: this.state.guesses.english,
+          math: this.state.guesses.math,
+          reading: this.state.guesses.reading,
+        },
+      }
+    } else {
+      newState = {
+        section: 'english',
+        test: this.state.test,
+        availableSections: ['english', 'math', 'reading', 'science'],
+        answers: {
+          english: this.state.answers.english,
+          math: this.state.answers.math,
+          reading:  this.state.answers.reading,
+          science: Array(40).fill(0)
+        },
+        timing: {
+          english: this.state.timing.english,
+          math:  this.state.timing.math,
+          reading:  this.state.timing.english,
+          science: 'onTime'
+        }, 
+        goals: {
+          english: this.state.goals.english,
+          math: this.state.goals.math,
+          reading: this.state.goals.reading,
+          science: 25
+        },
+        guesses: {
+          english: this.state.guesses.english,
+          math: this.state.guesses.math,
+          reading: this.state.guesses.reading,
+          science: 0
+        },
+      }
+    }
+    this.setState(newState);
+  }
+
   insertCorrectAnswers(){
     const answers = {...this.state.answers};
     const correctAnswers = [...this.state.test[this.state.section].questions.map(el => {
@@ -278,6 +340,7 @@ class Homepage extends Component {
 
   
   render(){
+    console.log(this.state.test)
     return (
       <div>
         <MainHeader 
@@ -305,6 +368,13 @@ class Homepage extends Component {
               )
             })}
             <div className={classes.inlineFlexContainer}>
+              <button className={[
+                  classes.sectionButton, 
+                  classes.small,
+                  this.state.timing[this.state.availableSections.includes('science')] ? classes.selected : null].join(' ')}
+                  onClick = {() => this.toggleScienceHandler()}>
+                INCLUDE SCIENCE
+              </button>
               <button className={[
                   classes.sectionButton, 
                   classes.small,

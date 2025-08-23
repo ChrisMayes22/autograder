@@ -183,3 +183,7 @@
     justify-content: space-around;
     flex-grow: 1;
 }
+
+h1 {
+    padding: 1rem;
+}
