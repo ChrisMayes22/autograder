@@ -17,7 +17,7 @@ function gradeTest(answers, section){
         console.log('questions:', section.questions);
         console.log('answers', answers)
         if(!section.questions[i][2]) {  // questions is ungraded
-            const wasCorrect = el !== section.questions[i][0] ? 'correct' : 'wrong';
+            const wasCorrect = el !== section.questions[i][0] ? 'wrong' : 'correct';
             scorePkg.ungraded.push(`#${i+1}: ${wasCorrect}`)
         } else if(el !== section.questions[i][0]) {   // section...[0] is right answer
             scorePkg.wrong.push(`#${i+1}`); 
