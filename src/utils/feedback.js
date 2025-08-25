@@ -120,12 +120,12 @@ const feedback = {
             by, and of. Your coach can provide you with materials for practicing prepositions common on the test!`
     },
     math: {
-        '1-20': `The first 20 questions cover the easiest topics, but sometimes these topics are from so long ago that students need a refresher!
+        '1-15': `The first 15 questions cover the easiest topics, but sometimes these topics are from so long ago that students need a refresher!
             Your coach will provide you with materials for mastering these simpler problems, like our Math Cheat Sheet for the First Forty Questions.`,
-        '21-40': `The middle 20 questions present some of the best opportunities to use our SUPERB strategies! Remember if you see integer answers in order
+        '16-30': `The middle 15 questions present some of the best opportunities to use our SUPERB strategies! Remember if you see integer answers in order
             to consider BACKSOLVING. Similarly, any time you see a phrase like "given that a is a positive integer," that is a clear sign that you should
             Pick Smart Numbers. Your coach will work with you to use these strategies to improve time and accuracy!`,
-        '41-60': `These questions are the hardest on the ACT Math. It is especially critical to consistently make judicious use of SUPERB strategies.
+        '31-45': `These questions are the hardest on the ACT Math. It is especially critical to consistently make judicious use of SUPERB strategies.
             In addition, your coach will work with you, using materials like our Math Cheat Sheet for the Last Twenty Questions, to 
            learn and master the most challenging concepts tested on the ACT Math.`
     },
