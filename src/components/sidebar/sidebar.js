@@ -42,7 +42,7 @@ const sidebar = props => {
                 value={2}
             />
             <button className={classes.button}>
-                UPDATED 11/21
+                UPDATED 10/25
             </button>
         </div>
     )
