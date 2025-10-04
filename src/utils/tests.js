@@ -743,6 +743,245 @@ const a11 = {
     },
 }
 
+const g70 = {
+  id: '70G',
+
+  english: {
+    scoreScale: [
+  1, 1, 2, 3, 4, 4, 5, 6, 6, 7,
+  7, 8, 8, 8, 9, 10, 10, 11, 12, 12,
+  13, 14, 15, 15, 15, 16, 17, 17, 18, 19,
+  19, 20, 20, 21, 21, 22, 23, 23, 24, 24,
+  25, 25, 26, 27, 29, 29, 31, 33, 34, 35,
+  36
+],
+    questions: [
+      ['A','Vocab in context',true],
+      ['B','Possessives',true],
+      ['C','Punctuation',true],
+      ['A','Verb Tense',true],
+      ['C','Transitions',true],
+
+      ['C','Inference',true],
+      ['B','Inference',true],
+      ['D','Conciseness',true],
+      ['B','Inference',true],
+      ['A','Verb Tense',true],
+      ['A','Punctuation',true],
+      ['B','Subject Verb Agreement',true],
+      ['D','Placement',true],
+      ['D','Omit',true],
+      ['A','Punctuation',true],
+
+      ['A','Punctuation',true],
+      ['A','Punctuation',true],
+      ['D','Inference',true],
+      ['A','Inference',true],
+      ['A','Punctuation',true],
+      ['C','Pronouns',true],
+      ['B','Placement',true],
+      ['B','Transitions',true],
+      ['D','Placement',true],
+      ['C','Punctuation',true],
+
+      ['D','Subject Verb Agreement',true],
+      ['D','Inference',true],
+      ['C','Inference',true],
+      ['D','Possessives',true],
+      ['C','Comparisons',true],
+      ['B','Inference',true],
+      ['C','Verb Tense',true],
+      ['D','Transitions',true],
+      ['B','Punctuation',true],
+      ['B','Punctuation',true],
+
+      ['D','Conciseness',true],
+      ['B','Placement',true],
+      ['C','Modifying Clauses',true],
+      ['C','Conciseness',true],
+      ['D','Conciseness',true],
+      ['A','Punctuation',true],
+      ['A','Punctuation',true],
+      ['A','Punctuation',true],
+      ['A','Punctuation',true],
+      ['D','Placement',true],
+
+      ['D','Conciseness',true],
+      ['C','Verb Tense',true],
+      ['B','Vagueness',true],
+      ['A','Conciseness',true],
+      ['B','Inference',true]
+    ]
+  },
+
+  math: {
+scoreScale: [
+  5, 7, 9, 11, 12, 13, 14, 14, 15, 15,
+  15, 16, 16, 16, 17, 17, 17, 18, 18, 19,
+  19, 21, 21, 22, 23, 23, 23, 24, 24, 25,
+  25, 26, 26, 27, 27, 27, 28, 29, 30, 31,
+  32, 33, 34, 35, 36, 36
+],
+    questions: [
+      ['C','Eliminate',true],
+      ['B','Simplify',true],
+      ['C','Simplify',true],
+      ['D','Pick Smart Numbers',true],
+      ['D','Simplify',true],
+      ['A','Eliminate',true],
+      ['D','Use Proportions',true],
+      ['D','Eliminate',true],
+      ['C','Simplify',true],
+      ['D','Simplify',true],
+      ['B','Simplify',true],
+      ['C','Simplify',true],
+      ['D','Simplify',true],
+      ['C','Pick Smart Numbers',true],
+      ['D','Elimination',true],
+
+      ['C','Elimination',true],
+      ['A','Eliminate',true],
+      ['D','Eliminate',true],
+      ['A','Elimination',true],
+      ['C','Use Proportions',true],
+      ['B','Simplify',true],
+      ['B','Eliminate',true],
+      ['B','Simplify',true],
+      ['D','Simplify',true],
+      ['D','Simplify',true],
+      ['C','Simplify',true],
+      ['A','Simplify',true],
+      ['D','Simplify',true],
+      ['C','Backsolve',true],
+      ['A','Simplify',true],
+
+      ['D','Simplify',true],
+      ['D','Pick Smart Numbers',true],
+      ['B','Elimination',true],
+      ['A','Simplify',true],
+      ['B','Simplify',true],
+      ['A','Simplify',true],
+      ['D','Backsolve',true],
+      ['D','Simplify',true],
+      ['D','Eliminate',true],
+      ['A','Pick Smart Numbers',true],
+
+      ['D','Simplify',true],
+      ['D','Elimination',true],
+      ['D','Simplify',true],
+      ['A','Elimination',true],
+      ['D','Simplify',true]
+    ]
+  },
+
+  reading: {
+scoreScale: [
+  2, 3, 5, 6, 7, 9, 10, 10, 11, 12,
+  13, 13, 14, 15, 15, 16, 17, 17, 19, 20,
+  20, 21, 22, 22, 23, 23, 24, 26, 27, 28,
+  29, 30, 31, 32, 33, 34, 36
+],
+    questions: [
+      ['A','Big Picture',true],
+      ['C','Detail',true],
+      ['A','Detail',true],
+      ['C','Detail',true],
+      ['C','Vocab in Context',true],
+      ['B','Detail',true],
+      ['D','Detail',true],
+      ['B','Detail',true],
+      ['D','Detail',true],
+
+      ['D','Detail',true],
+      ['C','Inference',true],
+      ['B','Detail',true],
+      ['C','Detail',true],
+      ['D','Detail',true],
+      ['A','Detail',true],
+      ['B','Detail',true],
+      ['A','Detail',true],
+      ['B','Detail',true],
+
+      ['B','Big Picture',true],
+      ['C','Inference',true],
+      ['C','Detail',true],
+      ['B','Inference',true],
+      ['D','Inference',true],
+      ['D','Detail',true],
+      ['B','Inference',true],
+      ['C','Inference',true],
+      ['A','Inference',true],
+
+      ['A','Big Picture',true],
+      ['C','Inference',true],
+      ['A','Detail',true],
+      ['B','Inference',true],
+      ['B','Inference',true],
+      ['A','Inference',true],
+      ['B','Purpose',true],
+      ['C','Detail',true],
+      ['A','Vocab in Context',true]
+    ]
+  },
+
+  science: {
+scoreScale: [
+  1, 3, 4, 6, 7, 8, 9, 10, 10, 11,
+  12, 13, 14, 15, 16, 17, 17, 18, 19, 20,
+  20, 21, 21, 22, 22, 23, 24, 24, 25, 25,
+  26, 27, 28, 29, 30, 31, 32, 34, 35, 36,
+  36
+],
+    questions: [
+  ['B','Detail',true],            // 1
+  ['A','Inference',true],         // 2
+  ['B','Inference',true],         // 3
+  ['B','New Information',true],   // 4
+  ['C','Detail',true],            // 5
+
+  ['B','Detail',true],            // 6
+  ['B','Detail',true],            // 7
+  ['D','Inference',true],         // 8
+  ['A','Inference',true],         // 9
+  ['C','Inference',true],         // 10  (first label only)
+
+  ['C','Detail',true],            // 11
+  ['D','Outside Info',true],      // 12  (first label only)
+  ['A','Detail',true],            // 13
+  ['B','Detail',true],            // 14
+  ['D','Detail',true],            // 15
+  ['D','New Information',true],   // 16
+  ['B','New Information',true],   // 17
+
+  ['D','Detail',true],            // 18
+  ['B','Detail',true],            // 19
+  ['A','Detail',true],            // 20  (first label only)
+  ['B','Detail',true],            // 21
+  ['B','New Information',true],   // 22
+  ['A','New Information',true],   // 23
+
+  ['A','Detail',true],            // 24
+  ['C','New Information',true],   // 25
+  ['B','New Information',true],   // 26
+  ['D','New Information',true],   // 27
+  ['A','Inference',true],         // 28
+  ['D','Outside Info',true],      // 29  (first label only)
+
+  ['D','Detail',true],            // 30
+  ['C','Inference',true],         // 31
+  ['C','Trend',true],             // 32
+  ['A','Method',true],            // 33
+  ['C','Trend',true],             // 34
+  ['C','Detail',true],            // 35
+  ['B','Method',true],            // 36
+  ['C','Trend',true],             // 37
+  ['C','Detail',true],            // 38  ← added/moved to match key
+  ['A','Detail',true],            // 39
+  ['A','Method',true]             // 40  ← this was the missing final item
+]
+  }
+};
+
 // const e73 = {
 //     id: '73e',
 //     english:{
@@ -4727,6 +4966,7 @@ const sat11 = {
 export default {
     // b02,
     a11,
+    g70
     // e73,
     // a09,
     // f67,
