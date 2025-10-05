@@ -14,6 +14,8 @@ import sectionLabelMap from '../../utils/sectionLabelMap';
 class SectionSummary extends Component{
 
     render(){
+        console.log(Object.keys(this.props[this.props.match.params.section].types), 
+                                                        this.props[this.props.match.params.section].types)
         return(
             <section className={classes.gridContainer}>
                 <div className={classes.composite}>
@@ -82,7 +84,7 @@ class SectionSummary extends Component{
                                                 )[i].toUpperCase()} QUESTIONS`
                                             }
                                             feedback={  
-                                                feedback[this.props.match.params.section.toLowerCase()][
+                                                feedback[this.props.match.params.section][
                                                     sortObjectAttributes(
                                                         Object.keys(this.props[this.props.match.params.section].types), 
                                                         this.props[this.props.match.params.section].types
