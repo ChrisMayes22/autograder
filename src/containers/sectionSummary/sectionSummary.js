@@ -82,11 +82,11 @@ class SectionSummary extends Component{
                                                 )[i].toUpperCase()} QUESTIONS`
                                             }
                                             feedback={  
-                                                feedback[this.props.match.params.section][
+                                                feedback[this.props.match.params.section.toLowerCase()][
                                                     sortObjectAttributes(
                                                         Object.keys(this.props[this.props.match.params.section].types), 
                                                         this.props[this.props.match.params.section].types
-                                                    )[i]
+                                                    )[i].toLowerCase()
                                                 ]
                                             }
                                             errors = {errors.length}
