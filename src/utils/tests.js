@@ -985,6 +985,259 @@ scoreScale: [
   }
 };
 
+const MC5 = {
+  id: 'MC5',
+
+  english: {
+    scoreScale: [
+  1, 2, 4, 5, 6, 7, 8, 9, 10, 10,
+  11, 11, 11, 12, 13, 14, 14, 15, 15, 16,
+  17, 18, 19, 20, 20, 21, 21, 22, 23, 23,
+  24, 25, 26, 27, 28, 30, 32, 34, 35, 35,
+  36
+],
+    questions: [
+  // Passage 1 (1–10)
+  ['D','Inference',true],
+  ['C','Punctuation',true],
+  ['D','Conciseness',true],
+  ['D','Inference',true],
+  ['D','Inference',true],
+  ['C','Verbs',true],
+  ['C','Inference',true],
+  ['C','Transitions',true],
+  ['B','Placement',true],
+  ['A','Yes/No',true],
+
+  // Passage 2 (11–20)
+  ['A','Punctuation',true],
+  ['B','Inference',true],
+  ['C','Placement',true],
+  ['C','Inference',true],
+  ['B','Punctuation',true],
+  ['C','Yes/No',false],       // Not scored
+  ['B','Placement',false],    // Not scored
+  ['D','Punctuation',false],  // Not scored
+  ['D','Conciseness',false],  // Not scored
+  ['A','Inference',false],    // Not scored
+
+  // Passage 3 (21–30)
+  ['C','Yes/No',false],       // Not scored
+  ['B','Punctuation',false],  // Not scored
+  ['B','Inference',false],    // Not scored
+  ['B','Inference',false],    // Not scored
+  ['A','Inference',false],    // Not scored
+  ['D','Transitions',true],
+  ['B','Inference',true],
+  ['D','Pronouns',true],
+  ['C','Vagueness',true],
+  ['A','Conciseness',true],
+
+  // Passage 4 (31–40)
+  ['D','Punctuation',true],
+  ['C','Verbs',true],
+  ['D','Conciseness',true],
+  ['A','Placement',true],
+  ['C','Yes/No',true],
+  ['A','Punctuation',true],
+  ['C','Conciseness',true],
+  ['D','Punctuation',true],
+  ['D','Placement',true],
+  ['D','Transitions',true],
+
+  // Passage 5 (41–50)
+  ['B','Yes/No',true],
+  ['A','Vocab in Context',true],
+  ['A','Punctuation',true],
+  ['D','Inference',true],
+  ['B','Yes/No',true],
+  ['D','Punctuation',true],
+  ['C','Verbs',true],
+  ['D','Punctuation',true],
+  ['A','Placement',true],
+  ['D','Placement',true]
+]
+  },
+
+  math: {
+scoreScale: [
+  1, 4, 7, 9, 10, 11, 12, 13, 14, 14,
+  14, 14, 15, 15, 16, 16, 16, 17, 17, 17,
+  18, 18, 19, 20, 21, 22, 23, 24, 25, 25,
+  26, 27, 27, 28, 29, 30, 31, 33, 34, 35,
+  36, 36
+],
+    // Replace just this array:
+questions: [
+  // 1–15 → "1-15"
+  ['A','1-15',true],
+  ['D','1-15',true],
+  ['B','1-15',true],
+  ['B','1-15',true],
+  ['C','1-15',true],
+  ['D','1-15',true],
+  ['A','1-15',true],
+  ['B','1-15',false],  // Not scored
+  ['B','1-15',true],
+  ['D','1-15',true],
+  ['A','1-15',true],
+  ['C','1-15',true],
+  ['A','1-15',true],
+  ['D','1-15',true],
+  ['B','1-15',true],
+
+  // 16–30 → "16-30"
+  ['B','16-30',true],
+  ['C','16-30',true],
+  ['B','16-30',false], // Not scored
+  ['A','16-30',true],
+  ['B','16-30',true],
+  ['C','16-30',true],
+  ['B','16-30',true],
+  ['B','16-30',true],
+  ['D','16-30',true],
+  ['B','16-30',true],
+  ['C','16-30',true],
+  ['C','16-30',true],
+  ['A','16-30',false], // Not scored
+  ['A','16-30',true],
+  ['D','16-30',true],
+
+  // 31–45 → "31-45"
+  ['B','31-45',true],
+  ['D','31-45',true],
+  ['B','31-45',true],
+  ['B','31-45',true],
+  ['A','31-45',true],
+  ['B','31-45',true],
+  ['B','31-45',true],
+  ['C','31-45',false], // Not scored
+  ['D','31-45',true],
+  ['A','31-45',true],
+  ['A','31-45',true],
+  ['D','31-45',true],
+  ['A','31-45',true],
+  ['A','31-45',true],
+  ['C','31-45',true]
+]
+
+  },
+
+  reading: {
+scoreScale: [
+  1, 3, 5, 7, 9, 10, 10, 11, 12, 13,
+  14, 15, 16, 17, 18, 20, 21, 22, 23, 24,
+  26, 27, 28, 30, 32, 34, 35, 36
+],
+    questions: [
+  // Passage 1 (1–9)
+  ['A','Purpose',true],
+  ['B','Inference',true],
+  ['B','Detail',true],
+  ['A','Detail',true],
+  ['C','Detail',true],
+  ['C','Big Picture',true],
+  ['D','Big Picture',true],
+  ['A','Inference',true],
+  ['A','Purpose',true],
+
+  // Passage 2 (10–18)
+  ['B','Inference',true],
+  ['C','Inference',true],
+  ['C','Detail',true],
+  ['A','Inference',true],
+  ['D','Inference',true],
+  ['A','Purpose',true],
+  ['C','Purpose',true],
+  ['B','Inference',true],
+  ['D','Detail',true],
+
+  // Passage 3 (19–27) — Not scored
+  ['B','Purpose',false],
+  ['D','Detail',false],
+  ['B','Inference',false],
+  ['B','Detail',false],
+  ['A','Purpose',false],
+  ['A','Detail',false],
+  ['B','Inference',false],
+  ['A','Detail',false],
+  ['C','Detail',false],
+
+  // Passage 4 (28–36)
+  ['D','Purpose',true],
+  ['B','Detail',true],
+  ['C','Inference',true],
+  ['D','Inference',true],
+  ['A','Detail',true],
+  ['D','Detail',true],
+  ['A','Vocab in Context',true],
+  ['C','Inference',true],
+  ['B','Purpose',true]
+]
+
+  },
+
+  science: {
+scoreScale: [
+  1, 3, 5, 7, 9, 10, 11, 11, 12, 13,
+  14, 15, 16, 17, 18, 18, 19, 20, 21, 21,
+  22, 23, 23, 24, 24, 25, 26, 26, 27, 28,
+  30, 32, 34, 35, 36
+],
+    questions: [
+  // 1–5
+  ['D','Detail',true],
+  ['A','Trend',true],
+  ['B','Detail',true],
+  ['A','Detail',true],
+  ['C','Detail',true],
+
+  // 6–11 (Not scored)
+  ['B','Detail',false],
+  ['B','Inference',false],
+  ['C','Detail',false],
+  ['C','Detail',false],
+  ['A','Detail',false],
+  ['C','Inference',false],
+
+  // 12–20
+  ['A','Detail',true],
+  ['A','Detail',true],
+  ['C','Detail',true],
+  ['C','Inference',true],
+  ['D','Outside Information',true],
+  ['D','Inference',true],
+  ['C','Method',true],
+  ['D','New Information',true],
+  ['B','Detail',true],
+
+  // 21–30
+  ['B','Trend',true],
+  ['B','Method',true],
+  ['A','Detail',true],
+  ['C','Detail',true],
+  ['D','Inference',true],
+  ['B','Trend',true],
+  ['D','New Information',true],
+  ['A','Inference',true],
+  ['D','Trend',true],
+  ['B','Trend',true],
+
+  // 31–40
+  ['C','Trend',true],
+  ['C','Detail',true],
+  ['A','New Information',true],
+  ['B','New Information',true],
+  ['D','Method',true],
+  ['A','Outside Information',true],
+  ['B','New Information',true],
+  ['A','Detail',true],
+  ['D','Detail',true],
+  ['A','Detail',true]
+]
+  }
+};
+
 // const e73 = {
 //     id: '73e',
 //     english:{
@@ -4969,7 +5222,8 @@ const sat11 = {
 export default {
     // b02,
     a11,
-    g70
+    g70,
+    MC5,
     // e73,
     // a09,
     // f67,
