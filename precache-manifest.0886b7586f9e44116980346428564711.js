@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b4fbae94434844aaf94f7b3b0cf957b3",
+    "revision": "337d03ac74d8e58fc14942b953818097",
     "url": "/autograder/index.html"
   },
   {
-    "revision": "f436a7d8e85bb86e02de",
+    "revision": "8506ad7ebe805be65eba",
     "url": "/autograder/static/css/main.17844a17.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/autograder/static/js/2.f882ff83.chunk.js"
   },
   {
-    "revision": "f436a7d8e85bb86e02de",
-    "url": "/autograder/static/js/main.86ef609c.chunk.js"
+    "revision": "8506ad7ebe805be65eba",
+    "url": "/autograder/static/js/main.5864bb7b.chunk.js"
   },
   {
     "revision": "a9fd6dc8c9c4c1a97e84",
